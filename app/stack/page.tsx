@@ -1,8 +1,11 @@
+import Skills from '@/components/skills'
 import React from 'react'
 
 const Stack = () => {
   return (
-    <div>Stack</div>
+    <div>
+      <Skills/>
+    </div>
   )
 }
 

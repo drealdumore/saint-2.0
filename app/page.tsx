@@ -1,5 +1,14 @@
-import Image from "next/image";
+import Header from '@/components/header'
+import Skills from '@/components/skills'
+import React from 'react'
 
-export default function Home() {
-  return <div>Home</div>;
+const Home = () => {
+  return (
+    <div className='flex flex-col gap-4'>
+      <Header/>
+      <Skills/>
+    </div>
+  )
 }
+
+export default Home
