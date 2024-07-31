@@ -1,11 +1,15 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const AppFooter = () => {
+  const pathName = usePathname();
   const links = [
     { href: "/", text: "Home" },
     { href: "/stack", text: "Stack" },
-    { href: "/about", text: "About me" },
+    { href: "/about", text: "About" },
   ];
 
   const contact = [
@@ -16,7 +20,7 @@ const AppFooter = () => {
   ];
 
   return (
-    <footer className="py-7 border-t border-t-zinc-100 dark:border-t-zinc-900">
+    <footer className="py-7 border-t font-bdog border-t-zinc-100 dark:border-t-zinc-900">
       <div className="max-w-screen-lx mx-auto md:px-10 px-6 grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-3 xs:col-span-2 max-w-md">
           <h3 className="font-semibold mb-2">Saint's personal site</h3>
@@ -29,7 +33,7 @@ const AppFooter = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-zinc-400 link transition-colors font-medium hover:text-zinc-600"
+                    className={`pathName === link.href ? underline underline-offset-2 text-neutral-900: '' text-zinc-400 link transition-colors font-medium hover:text-neutral-900 hover:cursor-alias`}
                   >
                     {link.text}
                   </Link>

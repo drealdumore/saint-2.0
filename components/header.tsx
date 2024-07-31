@@ -1,16 +1,19 @@
 import Image from "next/image";
 import React from "react";
+import WithIcon from "./withIcon";
 
 const Header = () => {
   return (
-    <header className="flex flex-col items-center justify-start md:gap-24 gap-16  w-full lg:pb-8 mb-12 lg:justify-between lg:flex-row ">
+    <header className="flex font-bdog flex-col items-center justify-start md:gap-24 gap-16  w-full lg:pb-8 mb-12 lg:justify-between lg:flex-row ">
       <article className="flex flex-col lg:h-2/6 h-2/5 max-lg:w-full max-lg:flex ">
         <article className="max-w-[170px] w-full flex-shrink-0 mb-10 ">
-          <img
+          <Image
             id="avatar"
-            src="./assets/avatars/avatar-smile.png"
+            src={"/avatars/avatar-smile.png"}
             className=" tw-shadow aspect-square rounded-full"
             alt="saint avatar"
+            height={160}
+            width={160}
           />
         </article>
         <article className="flex items-center  gap-x-3 mb-4">
@@ -30,28 +33,19 @@ const Header = () => {
 
         <article className="cursor-text max-w-2xl">
           <h1 className="text-xl font-semibold leading-snug pointer-events-none transition-colors group hover:text-zinc-400 mb-10">
-            <span className="group-hover:underline underline-offset-4">
+            <span className="font-cal leading-5">
               {" "}
-              <span className="font-bold text-2xl">Saint</span>| Angular Dev{" "}
+              <span className="font-bold font-cal text-2xl">Saint </span>|
+              Full-Stack Developer{" "}
             </span>
             <br></br>
-            Software Developer building digital products.
+            Full-Stack Developer building digital products.
           </h1>
           <p className="text-base mb-4">
             Hi 👋 I'm{" "}
-            <span className="font-bold text-lg font-serif">Saint</span> , a
-            Software Developer based in{" "}
-            <span className="relative p-1 leading-none text-sm dark:hover:bg-neutral-700 align-middle bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 inline-flex max-w-max gap-x-2 items-center rounded-sm ring-1 ring-neutral-200 dark:ring-neutral-700">
-              <Image
-                src="/icons/nigeria-flag.svg"
-                width="16"
-                height="16"
-                className="size-4 aspect-square rounded"
-                alt="Nigeria flag icon"
-                loading="lazy"
-              />
-              Nigeria{" "}
-            </span>{" "}
+            <span className="font-bold text-lg font-serif">Samuel</span> , a
+            Full-Stack Developer based in{" "}
+            <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> {" "}
             with a passion for web development. With over 4 years of hands-on
             experience, I've mastered the art of crafting seamless digital
             experiences. I'm interested in Angular, Software Development,

@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import WithIcon from "@/components/withIcon";
 
 const About = () => {
   return (
     <>
       <section>
-        <h1 className="text-2xl font-semibold mb-16 w-full Moranga text-[40px]">
+        <h1 className="text-2xl font-semibold mb-16 w-full font-cal text-[40px]">
           About Me
         </h1>
         <div className="flex gap-12 lg:flex-row flex-col mb-24">
@@ -21,18 +22,8 @@ const About = () => {
           </div>
           <div className="flex-grow md:max-w-2xl">
             <p className="text-zinc-500 mb-4">
-              Hi 👋 I'm Saint , a Software Developer based in {" "}
-              <span className="relative p-1 leading-none text-sm dark:hover:bg-neutral-700 align-middle bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 inline-flex max-w-max gap-x-2 items-center rounded-sm ring-1 ring-neutral-200 dark:ring-neutral-700">
-                <Image
-                  src="/icons/nigeria-flag.svg"
-                  width="16"
-                  height="16"
-                  className="size-4 aspect-square rounded"
-                  alt="Nigeria flag icon"
-                  loading="lazy"
-                />
-                Nigeria {" "}
-              </span> 
+              Hi 👋 I'm Saint , a Full-Stack Developer based in {" "}
+              <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> 
               {" "} with a passion for web development. With over 4 years of hands-on
               experience, I've mastered the art of crafting seamless digital
               experiences.
