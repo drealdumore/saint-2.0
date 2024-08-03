@@ -1,15 +1,16 @@
-import Skills from "@/components/skills";
 import React from "react";
+import { Backend } from "./components/Backend ";
+import { Heading } from "@/components/heading";
+import { Frontend } from "./components/Frontend";
 
 const Stack = () => {
   return (
     <div>
-      <div className="w-full flex flex-col pb-8 gap-3">
-        <h1 className="text-2xl font-semibold  w-full font-cal text-[40px]">
-          Tools and Tech I work with
-        </h1>
+      <div className="w-full flex flex-col pb-8 gap-3 max-w-3xl">
+        <Heading title="Tools and Tech I work with" />
 
-        <Skills />
+        <Frontend />
+        <Backend />
       </div>
     </div>
   );

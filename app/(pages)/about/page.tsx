@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import WithIcon from "@/components/withIcon";
+import { Heading } from "@/components/heading";
 
 const About = () => {
   return (
     <>
       <section>
-        <h1 className="text-2xl font-semibold mb-16 w-full font-cal text-[40px]">
-          About Me
-        </h1>
+        <Heading title="About Me" />
+
         <div className="flex gap-12 lg:flex-row flex-col mb-24">
           <div className="max-w-[170px] w-full flex-shrink-0">
             <Image
@@ -22,9 +22,9 @@ const About = () => {
           </div>
           <div className="flex-grow md:max-w-2xl">
             <p className="text-zinc-500 mb-4">
-              Hi 👋 I'm Saint , a Full-Stack Developer based in {" "}
-              <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> 
-              {" "} with a passion for web development. With over 4 years of hands-on
+              Hi 👋 I'm Saint , a Full-Stack Developer based in{" "}
+              <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> with a
+              passion for web development. With over 4 years of hands-on
               experience, I've mastered the art of crafting seamless digital
               experiences.
             </p>
