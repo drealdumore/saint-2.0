@@ -15,6 +15,10 @@ import {
   EXPRESSJS,
   GIT,
   FIREBASE,
+  REACT,
+  MongoDB,
+  PostgreSQL,
+  MySQL,
 } from "@/lib/icons";
 import { motion } from "framer-motion";
 
@@ -32,10 +36,14 @@ const Skills = () => {
     { icon: <TAILWIND />, skill: "Tailwind CSS" },
     { icon: <JAVASCRIPT />, skill: "JavaScript" },
     { icon: <TYPESCRIPT />, skill: "TypeScript" },
+    { icon: <MySQL />, skill: "MySQL" },
     { icon: <ANGULAR />, skill: "Angular" },
+    { icon: <REACT />, skill: "React" },
     { icon: <NEXTJS />, skill: "NextJs" },
     { icon: <NODEJS />, skill: "Node Js" },
     { icon: <EXPRESSJS />, skill: "Express Js" },
+    { icon: <MongoDB />, skill: "MongoDB" },
+    { icon: <PostgreSQL />, skill: "Postgres" },
     { icon: <GIT />, skill: "Git - Version Control" },
     { icon: <FIREBASE />, skill: "Firebase" },
   ];

@@ -1,3 +1,5 @@
+"use client";
+
 import { SkillCard } from "@/components/cards/skill-card";
 import {
   HTML,
@@ -5,42 +7,44 @@ import {
   TAILWIND,
   JAVASCRIPT,
   TYPESCRIPT,
+  REACT,
   ANGULAR,
   NEXTJS,
-  NODEJS,
-  EXPRESSJS,
-  GIT,
-  FIREBASE,
 } from "@/lib/icons";
 import React from "react";
 
 export const Frontend = () => {
-  const frontend = [
+  const frontendSkills = [
     { icon: <HTML />, skill: "HTML / CSS" },
     { icon: <SCSS />, skill: "SCSS" },
     { icon: <TAILWIND />, skill: "Tailwind CSS" },
     { icon: <JAVASCRIPT />, skill: "JavaScript" },
     { icon: <TYPESCRIPT />, skill: "TypeScript" },
     { icon: <ANGULAR />, skill: "Angular" },
-    { icon: <NEXTJS />, skill: "NextJs" },
+    { icon: <REACT />, skill: "ReactJS" },
+    { icon: <NEXTJS />, skill: "NextJS" },
   ];
+
   return (
     <div>
       <div>
-        <h2 className="text-xl font-semibold  w-full text-[40px]">Frontend</h2>
+        <h2 className="text-2xl font-semibold">Frontend Technologies</h2>
         <p className="font-medium">
-          For the frontend, I use this tools to make dynamic and user friendly
-          user interfaces.
+          These are the tools I use to create dynamic and user-friendly
+          interfaces for the frontend.
         </p>
       </div>
 
-      <div>
-        <div className="relative w-full">
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4 items-center">
-            {frontend.map((skill, index) => (
-              <SkillCard index={index} skill={skill.skill} icon={skill.icon} />
-            ))}
-          </div>
+      <div className="relative w-full mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {frontendSkills.map((skill, index) => (
+            <SkillCard
+              key={index}
+              index={index}
+              skill={skill.skill}
+              icon={skill.icon}
+            />
+          ))}
         </div>
       </div>
     </div>

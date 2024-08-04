@@ -1,4 +1,4 @@
-export const VideoBg = () => (
+export const VideoBg = ({ content }: any) => (
   <div className="relative flex flex-col gap-4 overflow-hidden">
     <video
       src="/bg/bg.mp4"
@@ -7,6 +7,6 @@ export const VideoBg = () => (
       loop
       className="absolute top-0 left-0 w-full h-full object-cover -z-10"
     />
-    {/* content */}
+    {content}
   </div>
 );

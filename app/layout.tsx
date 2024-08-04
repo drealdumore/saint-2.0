@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable}`}
+        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable} font-sans`}
       >
         <AppNav />
         <div className=" flex min-h-screen flex-col gap-12  p-8 text-neutral-800 mx-auto my-7 lg:pt-8 lg:py-20 sm:mx-5 md:mx-10">

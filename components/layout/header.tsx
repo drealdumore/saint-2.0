@@ -43,8 +43,8 @@ const Header = () => {
 
             <article className="cursor-text max-w-3xl">
               <h1 className="text-xl font-semibold leading-snug pointer-events-none transition-colors group hover:text-zinc-400 mb-5">
-                <span className="font-cal leading-5">
-                  <span className="font-bold font-cal text-2xl">Saint</span> |
+                <span className="font-cal leading-5 text-2xl">
+                  <span className="font-bold font-cal">Samuel</span> |
                   Full-Stack Developer
                 </span>
                 <br />
