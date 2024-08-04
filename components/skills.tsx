@@ -16,6 +16,7 @@ import {
   GIT,
   FIREBASE,
 } from "@/lib/icons";
+import { motion } from "framer-motion";
 
 interface SkillsInterface {
   icon?: any | null | undefined;
@@ -25,7 +26,7 @@ interface SkillsInterface {
 const Skills = () => {
   const pathName = usePathname();
 
-  const skillsArray = [
+  const skillsArray: SkillsInterface[] = [
     { icon: <HTML />, skill: "HTML / CSS" },
     { icon: <SCSS />, skill: "SCSS" },
     { icon: <TAILWIND />, skill: "Tailwind CSS" },
@@ -72,9 +73,14 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col justify-between gap-6 items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 15 }}
+        transition={{ delay: 0.8 }}
+        className="max-w-4xl w-full flex flex-col justify-between gap-6 items-center"
+      >
         <div className="w-full mx-auto mt-6 rounded-xl flex flex-col gap-y-12 justify-center items-start">
-          {/* <div className="w-full max-w-4xl mx-auto mt-6 rounded-xl flex flex-col gap-y-12 justify-center items-start"> */}
           <div>
             {pathName === "/" && (
               <div className="w-full flex flex-col pb-8 gap-3 text-center">
@@ -106,7 +112,7 @@ const Skills = () => {
 
           <div>
             {pathName === "/" && (
-              <div className="max-w-3xl w-full grid grid-cols-1 gap-x-2 gap-y-4">
+              <div className="w-full grid grid-cols-1 gap-x-2 gap-y-4">
                 <div>
                   <h2 className=" mb-3 font-cal font-bold text-2xl">
                     Soft Skills
@@ -127,7 +133,7 @@ const Skills = () => {
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

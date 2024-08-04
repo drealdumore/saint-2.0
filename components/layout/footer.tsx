@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { contacts } from "@/lib/social-profiles";
 
 const AppFooter = () => {
   const pathName = usePathname();
@@ -13,12 +14,6 @@ const AppFooter = () => {
     { href: "/bookmarks", text: "Bookmarks" },
   ];
 
-  const contact = [
-    { href: "mailto:samuelisah234@gmail.com", text: "Email" },
-    { href: "https://www.linkedin.com/in/isah-samuel/", text: "LinkedIn" },
-    { href: "https://twitter.com/drealdumore", text: "X.com" },
-    { href: "https://github.com/drealdumore", text: "GitHub" },
-  ];
 
   return (
     <footer className="py-7 border-t    border-t-zinc-100">
@@ -50,7 +45,7 @@ const AppFooter = () => {
           <div className="xl:place-self-end">
             <h4 className="font-semibold mb-3">Connect</h4>
             <ul className="space-y-2">
-              {contact.map((link, index) => (
+              {contacts.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}

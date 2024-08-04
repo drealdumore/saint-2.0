@@ -3,9 +3,9 @@
 import React from "react";
 
 type skill = {
-  index: number;
-  icon: any;
-  skill: string;
+  index: number | any | null | undefined;
+  icon?: any | null | undefined;
+  skill?: string | null | undefined;
 };
 
 export const SkillCard = ({ index, icon, skill }: skill) => {

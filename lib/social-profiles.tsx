@@ -41,3 +41,11 @@ export const SOCIALS = {
     icon: <LinkedinIcon size={16} />,
   },
 };
+
+
+export const contacts = [
+  { href: "mailto:samuelisah234@gmail.com", text: "Email" },
+  { href: "https://www.linkedin.com/in/samuel-isah/", text: "LinkedIn" },
+  { href: "https://twitter.com/drealdumore", text: "X.com" },
+  { href: "https://github.com/drealdumore", text: "GitHub" },
+];
