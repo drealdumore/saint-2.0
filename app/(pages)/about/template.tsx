@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import WithIcon from "@/components/withIcon";
-import { Heading } from "@/components/heading";
+import WithIcon from "@/components/design/withIcon";
+import { Heading } from "@/components/design/heading";
 import { contacts } from "@/lib/social-profiles";
 import Link from "next/link";
 
@@ -41,7 +41,7 @@ const About = () => {
           <div className="flex gap-12 lg:flex-row flex-col mb-24">
             <div className="flex-grow md:max-w-2xl flex text-zinc-500 flex-col gap-4">
               <p className="">
-                Hi 👋 I'm Saint, a Full-Stack Developer based in{" "}
+                Full-Stack Software Developer based in{" "}
                 <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> with a
                 passion for web development. With over 4 years of hands-on
                 experience, I've mastered the art of crafting seamless digital

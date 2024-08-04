@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import WithIcon from "../withIcon";
+import WithIcon from "../design/withIcon";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {

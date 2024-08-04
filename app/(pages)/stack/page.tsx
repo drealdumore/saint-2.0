@@ -1,6 +1,6 @@
 import React from "react";
 import { Backend } from "./components/Backend ";
-import { Heading } from "@/components/heading";
+import { Heading } from "@/components/design/heading";
 import { Frontend } from "./components/Frontend";
 
 const Stack = () => {

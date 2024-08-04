@@ -1,5 +1,5 @@
 import Header from '@/components/layout/header'
-import Skills from '@/components/skills'
+import Skills from '@/components/design/skills'
 import React from 'react'
 
 const Home = () => {

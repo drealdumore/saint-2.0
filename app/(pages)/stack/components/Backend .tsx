@@ -1,4 +1,4 @@
-import { SkillCard } from "@/components/skill-card";
+import { SkillCard } from "@/components/cards/skill-card";
 import {
   HTML,
   SCSS,

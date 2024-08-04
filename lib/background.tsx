@@ -1,22 +1,12 @@
-export const GradientBg = () => (
-  <div className="absolute top-0 z-0 size-full bg-white">
-    <div className="absolute bottom-auto left-auto right-0 top-0 size-[500px] translate-x-[-30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
+export const VideoBg = () => (
+  <div className="relative flex flex-col gap-4 overflow-hidden">
+    <video
+      src="/bg/bg.mp4"
+      autoPlay
+      muted
+      loop
+      className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+    />
+    {/* content */}
   </div>
 );
-
-export const GradientBg2 = () => (
-  <div className="absolute top-0 z-0 h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-);
-
-export const GradientBg3 = () => (
-  <div className="absolute inset-0 z-0 h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]" />
-);
-
-export const GradientBg4 = () => (
-  <div className="absolute top-0 z-0 h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(120,119,198,0.3)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]" />
-);
-
-
-export const BackgroundImage = () => {
-  <div  className="absolute top-0 z-0 h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(120,119,198,0.3)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]" />
-}
