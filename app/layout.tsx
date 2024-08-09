@@ -9,6 +9,7 @@ import AppFooter from "@/components/layout/footer";
 import AppNav from "@/components/layout/nav";
 import { sharedMetadata } from "@/lib/shared-meta";
 import { SOCIALS } from "@/lib/social-profiles";
+import Prefetch from "@/components/others/prefetch";
 
 const calSans = localFont({
   src: ".././public/fonts/CalSans-SemiBold.woff2",
@@ -31,6 +32,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable} font-sans max-w-2xl mx-auto flex flex-col`}
       >
+        <Prefetch />
+
         <AppNav />
         <main className=" flex min-h-screen flex-col gap-12  p-8 text-neutral-800  my-7 lg:pt-8 lg:py-20  ">
           {/* max-w-2xl sm:mx-5 md:mx-10"> */}

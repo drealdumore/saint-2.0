@@ -11,7 +11,6 @@ const WithIcon = ({ text, src }: { text: string; src: string }) => {
           height="16"
           className="size-4 aspect-square rounded"
           alt="Nigeria flag icon"
-          
         />
         {text}{" "}
       </span>

@@ -38,16 +38,17 @@ const About = () => {
           </div>
 
           {/* about content*/}
-          <div className="flex gap-12 lg:flex-row flex-col mb-24">
-            <div className="flex-grow md:max-w-2xl flex text-zinc-500 flex-col gap-4">
-              <p className="">
+          <div className="flex gap-12  flex-col mb-24">
+            {/* <div className="flex gap-12 lg:flex-row flex-col mb-24"> */}
+            <div className="flex-grow md:max-w-2xl flex text-zinc-500 flex-col gap-4 text-justify">
+              <p>
                 Full-Stack Software Developer based in{" "}
                 <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> with a
                 passion for web development. With over 4 years of hands-on
                 experience, I've mastered the art of crafting seamless digital
                 experiences.
               </p>
-              <p className="">
+              <p>
                 Innately curious person—passionate about the entanglement
                 between humans and technology, and the ways we interact with the
                 world. Currently crafting interfaces and building websites for a
@@ -55,13 +56,13 @@ const About = () => {
                 Tailwind CSS, Sass, JavaScript, TypeScript, Next.js, and
                 Node.js.
               </p>
-              <p className="">
+              <p>
                 I believe in the power of clean, efficient code to transform
                 ideas into reality. Whether it's weaving the intricacies of
                 Angular or navigating the frontiers of Next.js, I thrive on
                 turning challenges into opportunities.
               </p>
-              <p className="">
+              <p>
                 I am fueled by a passion for crafting exceptional,
                 high-performance applications. Coding is not just a job for me;
                 it's a dynamic journey where I thrive on creating seamless and
@@ -69,7 +70,7 @@ const About = () => {
                 canvas for shaping and enhancing the digital landscape.
               </p>
 
-              <p className="">
+              <p>
                 Beyond the lines of code, I treasure engaging conversations and
                 the rhythm of good music, serving as catalysts that inspire and
                 propel me in my creative process. Let's code a story where
@@ -79,7 +80,7 @@ const About = () => {
             </div>
 
             {/* links */}
-            <div className="max-w-s mx-7 flex gap-20  w-full lg:ml-auto xs:grid xs:grid-cols-2">
+            <div className="max-w-s flex gap-20  w-full lg:ml-auto xs:grid xs:grid-cols-2">
               <div className="self-start mb-10 xs:mb-0">
                 <h2 className="font-semibold mb-3">Socials</h2>
                 <ul className="space-y-2 -ml-1">
