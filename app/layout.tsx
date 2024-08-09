@@ -29,10 +29,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable} font-sans max-w-2xl mx-auto`}
+        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable} font-sans max-w-2xl mx-auto flex flex-col`}
       >
         <AppNav />
-        <main className=" flex min-h-screen flex-col gap-12  p-8 text-neutral-800 mx-auto my-7 lg:pt-8 lg:py-20  max-w-2xl">
+        <main className=" flex min-h-screen flex-col gap-12  p-8 text-neutral-800  my-7 lg:pt-8 lg:py-20  ">
           {/* max-w-2xl sm:mx-5 md:mx-10"> */}
           {children}
         </main>

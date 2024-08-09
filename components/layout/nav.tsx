@@ -19,8 +19,8 @@ const AppNav = () => {
 
   return (
     <>
-      <nav className="bg-white/50 backdrop-blur-sm flex flex-col gap-12 px-8 text-neutral-800 sticky mt-2 lg:top-0 lg:bottom-auto lg:border-t-transparent lg:border-l-transparent lg:border-r-transparent lg:border-b border border-zinc-200 lg:border-b-zinc-100 bg-white z-[51] top-auto bottom-8  w-full lg:max-w-none max-w-[90%] mx-auto rounded-full lg:rounded-none shadow-xl shadow-black/5 lg:shadow-none nav ">
-        <div className="w-full flex items-center justify-between max-w-screen-lx mx-auto md:px-10 min-[350px]:px-4 xs:px-3">
+      <nav className="bg-white/50 backdrop-blur-sm flex flex-col gap-12 px-5 text-neutral-800 sticky mt-2 lg:top-0 lg:bottom-auto lg:border-t-transparent lg:border-l-transparent lg:border-r-transparent lg:border-b border border-zinc-200 lg:border-b-zinc-100 bg-white z-[51] top-auto bottom-8  w-full lg:max-w-none max-w-[90%] mx-auto rounded-full lg:rounded-none shadow-xl shadow-black/5 lg:shadow-none nav ">
+        <div className="w-full flex items-center justify-between max-w-screen-lx mx-auto">
           <div>
             <Link href="/" className="flex flex-col">
               <p className="text-base hidden sm:block font-semibold fancy">

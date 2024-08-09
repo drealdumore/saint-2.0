@@ -14,28 +14,27 @@ const AppFooter = () => {
     { href: "/bookmarks", text: "Bookmarks" },
   ];
 
-
   return (
-    <footer className="py-7 border-t    border-t-zinc-100">
-      <div className="max-w-screen-lx mx-auto md:px-10 px-6 grid lg:grid-cols-5 gap-8">
+    <footer className="py-7 border-t  border-t-zinc-100">
+      <div className="max-w-screen-lx mx-auto md:px-10 px-6 grid lg:grid-cols-6 gap-8">
         <div className="lg:col-span-3 xs:col-span-2 max-w-md">
           <h3 className="font-semibold mb-2">Saint's personal site</h3>
         </div>
         <div className="footer-items">
-          <div className="xl:place-self-end lg:mr-6">
+          <div className="xl:place-self-end">
             <h4 className="font-semibold mb-3">Pages</h4>
             <ul className="space-y-2 w-max">
               {links.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className={`link transition-colors font-medium hover:text-neutral-900 hover:cursor-alias ${
+                    className={`link transition-colors font-light hover:text-neutral-900 hover:cursor-alias ${
                       pathName === link.href
-                        ? "underline underline-offset-2 text-neutral-900 "
+                        ? "underline underline-offset-2 text-neutral-900 font-medium"
                         : "text-zinc-400"
                     }`}
                   >
-                    {pathName === link.href && <span>/</span>}
+                    {pathName === link.href && <span>/ </span>}
                     {link.text}
                   </Link>
                 </li>
@@ -49,7 +48,7 @@ const AppFooter = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-zinc-400 hover:text-neutral-900 transition-colors font-medium cursor-alias"
+                    className="text-zinc-400 hover:text-neutral-900 hover:underline underline-offset-1 transition-colors font-light cursor-alias"
                   >
                     {link.text}
                   </Link>
