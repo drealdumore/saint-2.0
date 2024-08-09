@@ -135,3 +135,17 @@ body {
 .link-active {
   @apply underline underline-offset-4;
 }
+
+/* svg filter for chrome and edge */
+@supports (backdrop-filter: url("#svgfilter")) {
+  .nav {
+    backdrop-filter: url("#svgfilter");
+  }
+}
+
+/* Added this cos the svg filter wasnt working on my firefox */
+@-moz-document url-prefix() {
+  .nav {
+    backdrop-filter: blur(4px); /* Specific to Firefox */
+  }
+}
