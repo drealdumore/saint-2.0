@@ -26,16 +26,17 @@ const AppFooter = () => {
             <ul className="space-y-2 w-max">
               {links.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    href={link.href}
-                    className={`link transition-colors font-light hover:text-neutral-900 hover:cursor-alias ${
-                      pathName === link.href
-                        ? "underline underline-offset-2 text-neutral-900 font-medium"
-                        : "text-zinc-400"
-                    }`}
-                  >
-                    {pathName === link.href && <span>/ </span>}
-                    {link.text}
+                  <Link href={link.href}>
+                    {pathName === link.href && <span>- </span>}
+                    <span
+                      className={`link transition-colors font-light hover:text-neutral-900 hover:cursor-alias ${
+                        pathName === link.href
+                          ? "underline underline-offset-2 text-neutral-900 font-medium"
+                          : "text-zinc-400"
+                      }`}
+                    >
+                      {link.text}
+                    </span>
                   </Link>
                 </li>
               ))}
