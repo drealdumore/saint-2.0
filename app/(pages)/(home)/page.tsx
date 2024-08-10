@@ -1,14 +1,12 @@
-import Header from '@/components/layout/header'
-import Skills from '@/components/design/skills'
-import React from 'react'
+import React from "react";
+import Home from "./template";
 
-const Home = () => {
+const page = () => {
   return (
-    <div className='flex flex-col gap-4'>
-      <Header/>
-      <Skills/>
-    </div>
-  )
-}
+    <>
+      <Home />
+    </>
+  );
+};
 
-export default Home
+export default page;

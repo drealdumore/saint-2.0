@@ -4,7 +4,7 @@ import Image from "next/image";
 const WithIcon = ({ text, src }: { text: string; src: string }) => {
   return (
     <>
-      <span className="p-1 cursor-pointer leading-none text-sm  align-middle bg-neutral-50 hover:bg-neutral-100  inline-flex max-w-max gap-x-2 items-center rounded-sm ring-1 ring-neutral-200">
+      <span className="px-1.5  py-0 border border-transparent cursor-pointer bg-neutral-50  gap-x-2  ring-1 ring-neutral-200 relative rounded-sm   inline-flex items-center transition-colors hover:bg-neutral-100">
         {" "}
         <Image
           src={src}

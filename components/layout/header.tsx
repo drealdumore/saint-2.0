@@ -12,7 +12,7 @@ const Header = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 15 }}
-      transition={{ delay: 0.5 }}
+      transition={{ delay: 0.15 }}
     >
       <AnimatePresence>
         <div className="flex flex-col items-center justify-start md:gap-24 gap-16 w-full lg:pb-8 lg:justify-between lg:flex-row">

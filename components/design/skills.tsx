@@ -85,7 +85,7 @@ const Skills = () => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 15 }}
-        transition={{ delay: 0.8 }}
+        transition={{ delay: 0.3 }}
         className="max-w-4xl w-full flex flex-col justify-between gap-6 items-center"
       >
         <div className="w-full mx-auto mt-6 rounded-xl flex flex-col gap-y-12 justify-center items-start">
