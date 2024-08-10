@@ -1,15 +1,17 @@
-import About from "./template";
+import React from "react";
+import Archive from "./template";
 import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `About me | ${sharedMetadata.title}`,
+  title: `Archive | ${sharedMetadata.title}`,
+  description: "My collection of smaller projects, MVPs, and creative ideas.",
 };
 
 const page = () => {
   return (
     <>
-      <About />
+      <Archive />
     </>
   );
 };

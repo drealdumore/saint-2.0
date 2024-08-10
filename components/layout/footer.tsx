@@ -3,8 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CONTACTS } from "@/lib/social-profiles";
-import { NAVLINKS } from "@/lib/constants";
+import { CONTACTS } from "@/lib/constants/social-profiles";
+import { NAVLINKS } from "@/lib/constants/links";
+
 
 const AppFooter = () => {
   const pathName = usePathname();

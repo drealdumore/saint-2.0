@@ -1,6 +1,6 @@
 import React from "react";
 import BookmarkTemplate from "./template";
-import { sharedMetadata } from "@/lib/shared-meta";
+import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

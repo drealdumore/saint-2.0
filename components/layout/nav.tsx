@@ -147,7 +147,6 @@ const AppNav = () => {
                   pathName === link.link ? " text-neutral-900" : ""
                 }text-zinc-400 flex items-center rounded-[8px] justify-center px-2 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative 
                 `}
-                // }text-zinc-400 flex items-center rounded-full justify-center px-4 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative
               >
                 {link.title}
               </Link>

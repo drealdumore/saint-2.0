@@ -1,4 +1,4 @@
-import { LINK } from "@/lib/icons";
+import { LINK } from "@/lib/constants/icons";
 import { formatDateDifference } from "@/utils/formatDateDifference";
 import Link from "next/link";
 import React from "react";

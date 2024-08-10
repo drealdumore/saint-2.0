@@ -10,7 +10,7 @@ import {
   REACT,
   ANGULAR,
   NEXTJS,
-} from "@/lib/icons";
+} from "@/lib/constants/icons";
 import React from "react";
 
 export const Frontend = () => {

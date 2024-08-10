@@ -1,4 +1,4 @@
-import { LINK } from "@/lib/icons";
+import { LINK } from "@/lib/constants/icons";
 import Image from "next/image";
 import Link from "next/link";
 

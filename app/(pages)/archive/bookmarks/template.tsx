@@ -4,8 +4,7 @@ import { BookmarkCard } from "@/components/cards/bookmark-card";
 import ProjectCard from "@/components/cards/project-card";
 import { Heading } from "@/components/design/heading";
 import Motion from "@/components/design/y-motion";
-import { sharedMetadata } from "@/lib/shared-meta";
-import { Metadata } from "next";
+
 import React, { useState, useEffect, useRef } from "react";
 
 interface LinkPosition {

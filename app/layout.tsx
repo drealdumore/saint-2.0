@@ -6,8 +6,8 @@ import { GeistMono } from "geist/font/mono";
 
 import "./globals.css";
 import AppFooter from "@/components/layout/footer";
-import { sharedMetadata } from "@/lib/shared-meta";
-import { SOCIALS } from "@/lib/social-profiles";
+import { sharedMetadata } from "@/lib/constants/shared-meta";
+import { SOCIALS } from "@/lib/constants/social-profiles";
 import Prefetch from "@/components/others/prefetch";
 import AppNav from "@/components/layout/nav";
 // import AppNav from "@/components/layout/test-nav";
@@ -37,7 +37,7 @@ export default function RootLayout({
         <div className="relative font-sans max-w-2xl mx-auto selection:bg-neutral-800 selection:text-white">
           <AppNav />
 
-          <main className="px-3 sm:px-4 md:p-8 min-h-screen text-neutral-800  my-7 lg:pt-8 lg:py-20">
+          <main className="px-4 sm:px-5 md:p-8 min-h-screen text-neutral-800  my-7 lg:pt-8 lg:py-20">
             {children}
           </main>
 

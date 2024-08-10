@@ -1,7 +1,7 @@
 "use client";
 
 import { SkillCard } from "@/components/cards/skill-card";
-import { NODEJS, EXPRESSJS, MongoDB, MySQL, PostgreSQL } from "@/lib/icons";
+import { NODEJS, EXPRESSJS, MongoDB, MySQL, PostgreSQL } from "@/lib/constants/icons";
 import React from "react";
 
 export const Backend = () => {

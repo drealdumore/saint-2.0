@@ -19,7 +19,7 @@ import {
   MongoDB,
   PostgreSQL,
   MySQL,
-} from "@/lib/icons";
+} from "@/lib/constants/icons";
 import { motion } from "framer-motion";
 
 interface SkillsInterface {
@@ -128,7 +128,7 @@ const Skills = () => {
                 </div>
 
                 {softSkills.map((skill, i) => (
-                  <div className="min-w-[120px] py-4 px-3 ring-4 ring-neutral-800/5 gap-y-4 gap-x-4 justify-start items-center  border border-gray-200 rounded-lg flex">
+                  <div key={i} className="min-w-[120px] py-4 px-3 ring-4 ring-neutral-800/5 gap-y-4 gap-x-4 justify-start items-center  border border-gray-200 rounded-lg flex">
                     <p className=" fancy font-bold opacity-100 hover:opacity-100 transition-all">
                       {skill.title}:{" "}
                       <span className="opacity-90 font-light">

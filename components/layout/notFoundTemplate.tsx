@@ -3,7 +3,8 @@
 import Link from "next/link";
 import React from "react";
 import Motion from "../design/y-motion";
-import { NAVLINKS } from "@/lib/constants";
+import { NAVLINKS } from "@/lib/constants/links";
+
 
 const NotFoundTemplate = () => {
   return (
