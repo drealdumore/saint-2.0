@@ -23,7 +23,6 @@ const AppNav = () => {
     },
   ];
 
-  const [activeLinkIndex, setActiveLinkIndex] = useState(0);
   const [linkPositions, setLinkPositions] = useState<LinkPosition[]>([]);
   const [selectorPosition, setSelectorPosition] = useState<{
     x: number;
@@ -31,80 +30,43 @@ const AppNav = () => {
   }>({ x: 0, width: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
   const selector = useRef<HTMLDivElement>(null);
+  const [activeLinkIndex, setActiveLinkIndex] = useState(0);
 
-  // const handleSelector = () => {
-  //   const activeLink = containerRef.current?.children[activeLinkIndex] as HTMLElement;
-  //   if (activeLink) {
-  //     const { left, width } = activeLink.getBoundingClientRect();
-  //     const containerRect = containerRef.current?.getBoundingClientRect();
-
-  //     if (containerRect) {
-  //       const containerLeft = containerRect.left;
-  //       const containerRight = containerRect.right;
-
-  //       // Adjustments for mobile screens
-  //       const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  //       const mobileWidthFactor = 1.2;
-
-  //       // Calculate the selector's new position and width
-  //       let newLeft = isMobile ? left - width / (mobileWidthFactor * 2) : left;
-  //       let newWidth = isMobile ? width * mobileWidthFactor : width;
-
-  //       // Constrain the selector within the container bounds
-  //       newLeft = Math.max(newLeft, containerLeft);
-  //       newWidth = Math.min(newWidth, containerRight - newLeft);
-
-  //       setSelectorPosition({
-  //         x: newLeft - containerLeft, // Ensure this line does not include any extra offset
-  //         width: newWidth,
-  //       });
-
-  //       // Show the selector
-  //       selector.current?.classList.remove("opacity-0");
-  //       setTimeout(() => {
-  //         if (selector.current) {
-  //           selector.current.classList.add("transition-all");
-  //         }
-  //       }, 100);
-  //     }
-  //   } else {
-  //     // Hide the selector for non-allowed pages
-  //     selector.current?.classList.add("opacity-0");
-  //   }
-  // };
-
-  const handleSelector = () => {
-    const activeLink = containerRef.current?.children[
-      activeLinkIndex
-    ] as HTMLElement;
+  const updateSelectorPosition = (index: number) => {
+    const activeLink = containerRef.current?.children[index] as HTMLElement;
     if (activeLink) {
       const { left, width } = activeLink.getBoundingClientRect();
       const containerRect = containerRef.current?.getBoundingClientRect();
 
       if (containerRect) {
         const containerLeft = containerRect.left;
-        const containerRight = containerRect.right;
 
         // Adjustments for mobile screens
-        const isMobile =
-          typeof window !== "undefined" && window.innerWidth < 768;
-        const mobileWidthFactor = 1.2;
+        // const isMobile =
+        //   typeof window !== "undefined" && window.innerWidth < 768;
+        // const mobileWidthFactor = 1.2;
 
-        // Calculate the selector's new position and width
-        let newLeft =
-          (isMobile ? left - width / (mobileWidthFactor * 2) : left) - 31;
-          // (isMobile ? left - width / (mobileWidthFactor * 2) : left) - 31; // Subtract 12px for the offset
-        // let newLeft = (isMobile ? left - width / (mobileWidthFactor * 2) : left) - 12; // Subtract 12px for the offset
-        let newWidth = isMobile ? width * mobileWidthFactor : width;
+        // // Calculate the selector's new position and width
+        // const newLeft = isMobile
+        //   ? left - width / (mobileWidthFactor)
+        //   // ? left - width / (mobileWidthFactor * 2)
+        //   : left;
+        // const newWidth = isMobile ? width * mobileWidthFactor : width;
 
-        // Constrain the selector within the container bounds
-        newLeft = Math.max(newLeft, containerLeft);
-        newWidth = Math.min(newWidth, containerRight - newLeft);
+        const newLeft = left;
+        const newWidth = width;
 
         setSelectorPosition({
-          x: newLeft - containerLeft, // Ensure this line does not include any extra offset
+          x: newLeft - containerLeft,
           width: newWidth,
         });
+
+        // Center the text inside the selector
+        selector.current!.style.transform = `translateX(${
+          newLeft - containerLeft
+        }px)`;
+        selector.current!.style.width = `${newWidth}px`;
+        selector.current!.style.lineHeight = `${activeLink.offsetHeight}px`;
 
         // Show the selector
         selector.current?.classList.remove("opacity-0");
@@ -121,22 +83,20 @@ const AppNav = () => {
   };
 
   useLayoutEffect(() => {
-    if (selectorPosition.x === 0 && selectorPosition.width === 0) {
-      setTimeout(() => {
-        handleSelector();
-      }, 100);
+    if (linkPositions.length > 0) {
+      const activeLinkIndex = links.findIndex((link) => link.link === pathName);
+
+      if (activeLinkIndex >= 0) {
+        updateSelectorPosition(activeLinkIndex);
+      }
     }
 
-    requestAnimationFrame(() => {
-      handleSelector();
-    });
-
-    window.addEventListener("resize", handleSelector);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleSelector);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [pathName, activeLinkIndex]);
+  }, [linkPositions, pathName]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -150,11 +110,29 @@ const AppNav = () => {
     }
   }, [containerRef.current]);
 
+  const handleResize = () => {
+    const activeLinkIndex = links.findIndex((link) => link.link === pathName);
+
+    if (activeLinkIndex >= 0) {
+      updateSelectorPosition(activeLinkIndex);
+    }
+  };
+
   return (
     <>
-      <nav className="bg-white/50 backdrop-blur-sm flex flex-col gap-12 px-5 text-neutral-800 sticky mt-2 lg:top-0 lg:bottom-auto lg:border-t-transparent lg:border-l-transparent lg:border-r-transparent lg:border-b border border-zinc-200 lg:border-b-zinc-100 bg-white z-[51] top-auto bottom-8  w-full lg:max-w-none max-w-[90%] mx-auto rounded-full lg:rounded-none shadow-xl shadow-black/5 lg:shadow-none nav">
-        <div className="w-full flex items-center justify-between max-w-screen-lx mx-auto">
+      <nav className="bg-white/50 gap-12 px-2 text-neutral-800 sticky mt-2 pb-1 top-0 bottom-auto border-t-transparent border-l-transparent border-r-transparent border-b  border-b-zinc-100  z-[51]  w-full max-w-none  mx-auto rounded-none shadow-none nav">
+        {/* <nav className="bg-white/50 backdrop-blur-sm flex flex-col gap-12 px-1 text-neutral-800 sticky mt-2 lg:top-0 lg:bottom-auto lg:border-t-transparent lg:border-l-transparent lg:border-r-transparent lg:border-b border border-zinc-200 lg:border-b-zinc-100 bg-white z-[51] top-auto bottom-8  w-full lg:max-w-none max-w-[90%] mx-auto rounded-full lg:rounded-none shadow-xl shadow-black/5 lg:shadow-none nav"> */}
+        <div className="w-full px-0 md:px-1.5  flex items-center justify-between max-w-screen-lx mx-auto">
+          {/* <div className="w-full lg:px-0 md:px-1.5 px-0 flex items-center justify-between max-w-screen-lx mx-auto"> */}
           <div>
+            <Link href="/" className="flex flex-col">
+              <p className="text-base block font-semibold font-mono sm:font-sans">Saint</p>
+              <p className="text-[13px]  hidden md:block opacity-80 group-hover:opacity-100">
+                Full-Stack Developer
+              </p>
+            </Link>
+          </div>
+          {/* <div>
             <Link href="/" className="flex flex-col">
               <p className="text-base hidden sm:block font-semibold fancy">
                 Saint
@@ -163,10 +141,10 @@ const AppNav = () => {
                 Full-Stack Developer
               </p>
             </Link>
-          </div>
+          </div> */}
           <div
-            // style={{ width: "18rem" }}
-            className="flex items-center md:gap-8 gap-2 justify-between md:justify-normal w-full md:w-auto lg:px-0 md:px-1.5 px-0"
+            className="flex items-center md:gap-4 gap-2 justify-between md:justify-normal w-auto -0 px-0 relative"
+            // className="flex items-center md:gap-4 gap-2 justify-between md:justify-normal w-full md:w-auto lg:px-0 md:px-1.5 px-0 relative"
             id="nav-links"
             ref={containerRef}
           >
@@ -174,13 +152,12 @@ const AppNav = () => {
               <Link
                 key={i}
                 onClick={() => setActiveLinkIndex(i)}
-                href="#"
-                // href={link.link}
+                href={link.link}
                 className={`${
-                  pathName === link.link ? "underline" : ""
-                }text-zinc-400 link hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50  ${
-                  activeLinkIndex === i ? "bg-opacity-50" : ""
-                }`}
+                  pathName === link.link ? " text-neutral-900" : ""
+                }text-zinc-400 flex items-center rounded-md justify-center px-2 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative 
+                `}
+                // }text-zinc-400 flex items-center rounded-full justify-center px-4 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative
               >
                 {link.title}
               </Link>
@@ -189,7 +166,9 @@ const AppNav = () => {
             {linkPositions.length > 0 && (
               <div
                 ref={selector}
-                className="transition-all h-9 bg-gray-200 px-8 rounded-full absolute z-0 duration-300 opacity-0"
+                className={`transition-all px-2 h-9 bg-gray-200 rounded-md absolute duration-300 opacity-0 flex items-center justify-center ${
+                  pathName === links[activeLinkIndex].link ? "z-40" : "z-0"
+                }`}
                 style={{
                   transform: `translateX(${selectorPosition.x}px)`,
                   width: `${selectorPosition.width}px`,

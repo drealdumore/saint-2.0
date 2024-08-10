@@ -6,11 +6,11 @@ import { GeistMono } from "geist/font/mono";
 
 import "./globals.css";
 import AppFooter from "@/components/layout/footer";
-// import AppNav from "@/components/layout/nav";
 import { sharedMetadata } from "@/lib/shared-meta";
 import { SOCIALS } from "@/lib/social-profiles";
 import Prefetch from "@/components/others/prefetch";
-import AppNav from "@/components/layout/test-nav";
+import AppNav from "@/components/layout/nav";
+// import AppNav from "@/components/layout/test-nav";
 
 const calSans = localFont({
   src: ".././public/fonts/CalSans-SemiBold.woff2",
@@ -31,17 +31,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable} font-sans max-w-2xl mx-auto flex flex-col`}
+        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable}`}
       >
         <Prefetch />
+        <div className="relative font-sans max-w-2xl mx-auto selection:bg-neutral-800 selection:text-white">
+          <AppNav />
 
-        <AppNav />
-        {/* <AppNav /> */}
-        <main className=" flex min-h-screen flex-col gap-12  p-8 text-neutral-800  my-7 lg:pt-8 lg:py-20  ">
-          {/* max-w-2xl sm:mx-5 md:mx-10"> */}
-          {children}
-        </main>
-        <AppFooter />
+          <main className=" lex min-h-screen flex-col gap-12  p-8 text-neutral-800  my-7 lg:pt-8 lg:py-20  ">
+            {children}
+          </main>
+
+          <AppFooter />
+        </div>
       </body>
     </html>
   );

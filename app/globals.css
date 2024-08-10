@@ -8,6 +8,9 @@
   }
 }
 
+html {
+  @apply scroll-smooth;
+}
 /* Add a slash before the link text */
 .link::before {
   content: "/";
@@ -47,13 +50,6 @@
       Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
       Helvetica Neue, sans-serif;
   }
-}
-
-::selection {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 body {

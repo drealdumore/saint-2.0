@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        gray: {
+          200: "#dcdcdc",
+        },
+      },
       fontFamily: {
         cal: ["var(--font-calSans)"],
         bdog: ["var(--font-bdog)"],
@@ -32,4 +37,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
