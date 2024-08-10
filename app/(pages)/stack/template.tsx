@@ -1,11 +1,14 @@
+"use client";
+
 import React from "react";
 import { Backend } from "./components/Backend ";
 import { Frontend } from "./components/Frontend";
 import { Heading } from "@/components/design/heading";
+import Motion from "@/components/design/y-motion";
 
 const Template = () => {
   return (
-    <div>
+    <Motion>
       <div className="w-full flex flex-col pb-8 gap-2 max-w-3xl">
         <Heading title="Tools and Tech I work with" />
 
@@ -14,7 +17,7 @@ const Template = () => {
           <Backend />
         </div>
       </div>
-    </div>
+    </Motion>
   );
 };
 

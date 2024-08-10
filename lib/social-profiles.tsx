@@ -43,7 +43,7 @@ export const SOCIALS = {
 };
 
 
-export const contacts = [
+export const CONTACTS = [
   { href: "mailto:samuelisah234@gmail.com", text: "Email" },
   { href: "https://www.linkedin.com/in/samuel-isah/", text: "LinkedIn" },
   { href: "https://twitter.com/drealdumore", text: "X.com" },

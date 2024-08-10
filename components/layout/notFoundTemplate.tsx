@@ -3,14 +3,9 @@
 import Link from "next/link";
 import React from "react";
 import Motion from "../design/y-motion";
+import { NAVLINKS } from "@/lib/constants";
 
 const NotFoundTemplate = () => {
-  const links = [
-    { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
-    { href: "/stack", text: "Stack" },
-    { href: "/bookmarks", text: "Bookmarks" },
-  ];
   return (
     <>
       <Motion>
@@ -26,7 +21,7 @@ const NotFoundTemplate = () => {
               </p>
             </div>
             <ul className="mt-3 flex flex-col gap-2">
-              {links.map((link, index) => (
+              {NAVLINKS.map((link, index) => (
                 <li key={index}>
                   <Link
                     prefetch={true}

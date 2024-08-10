@@ -37,8 +37,7 @@ export default function RootLayout({
         <div className="relative font-sans max-w-2xl mx-auto selection:bg-neutral-800 selection:text-white">
           <AppNav />
 
-          <main className="p-8 min-h-screen text-neutral-800  my-7 lg:pt-8 lg:py-20">
-          {/* <main className=" lex min-h-screen flex-col gap-12  p-8 text-neutral-800  my-7 lg:pt-8 lg:py-20  "> */}
+          <main className="px-3 sm:px-4 md:p-8 min-h-screen text-neutral-800  my-7 lg:pt-8 lg:py-20">
             {children}
           </main>
 

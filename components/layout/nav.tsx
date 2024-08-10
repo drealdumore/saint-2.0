@@ -41,18 +41,6 @@ const AppNav = () => {
       if (containerRect) {
         const containerLeft = containerRect.left;
 
-        // Adjustments for mobile screens
-        // const isMobile =
-        //   typeof window !== "undefined" && window.innerWidth < 768;
-        // const mobileWidthFactor = 1.2;
-
-        // // Calculate the selector's new position and width
-        // const newLeft = isMobile
-        //   ? left - width / (mobileWidthFactor)
-        //   // ? left - width / (mobileWidthFactor * 2)
-        //   : left;
-        // const newWidth = isMobile ? width * mobileWidthFactor : width;
-
         const newLeft = left;
         const newWidth = width;
 
@@ -120,13 +108,15 @@ const AppNav = () => {
 
   return (
     <>
-      <nav className="bg-white/50 gap-12 px-2 text-neutral-800 sticky mt-2 pb-1 top-0 bottom-auto border-t-transparent border-l-transparent border-r-transparent border-b  border-b-zinc-100  z-[51]  w-full max-w-none  mx-auto rounded-none shadow-none nav">
+      <nav className="bg-white/50 gap-12 px-2 text-neutral-800 sticky mt-2 pb-1 pt-2 top-0 bottom-auto border-t-transparent border-l-transparent border-r-transparent border-b  border-b-zinc-100  z-[51]  w-full max-w-none  mx-auto rounded-none shadow-none nav">
         {/* <nav className="bg-white/50 backdrop-blur-sm flex flex-col gap-12 px-1 text-neutral-800 sticky mt-2 lg:top-0 lg:bottom-auto lg:border-t-transparent lg:border-l-transparent lg:border-r-transparent lg:border-b border border-zinc-200 lg:border-b-zinc-100 bg-white z-[51] top-auto bottom-8  w-full lg:max-w-none max-w-[90%] mx-auto rounded-full lg:rounded-none shadow-xl shadow-black/5 lg:shadow-none nav"> */}
         <div className="w-full px-0 md:px-1.5  flex items-center justify-between max-w-screen-lx mx-auto">
           {/* <div className="w-full lg:px-0 md:px-1.5 px-0 flex items-center justify-between max-w-screen-lx mx-auto"> */}
           <div>
             <Link href="/" className="flex flex-col">
-              <p className="text-base block font-semibold font-mono sm:font-sans">Saint</p>
+              <p className="text-base block font-semibold  sm:font-sans">
+                Saint
+              </p>
               <p className="text-[13px]  hidden md:block opacity-80 group-hover:opacity-100">
                 Full-Stack Developer
               </p>
@@ -155,7 +145,7 @@ const AppNav = () => {
                 href={link.link}
                 className={`${
                   pathName === link.link ? " text-neutral-900" : ""
-                }text-zinc-400 flex items-center rounded-md justify-center px-2 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative 
+                }text-zinc-400 flex items-center rounded-[8px] justify-center px-2 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative 
                 `}
                 // }text-zinc-400 flex items-center rounded-full justify-center px-4 h-9 hover:text-neutral-800 py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base z-50 relative
               >
@@ -166,7 +156,7 @@ const AppNav = () => {
             {linkPositions.length > 0 && (
               <div
                 ref={selector}
-                className={`transition-all px-2 h-9 bg-gray-200 rounded-md absolute duration-300 opacity-0 flex items-center justify-center ${
+                className={`transition-all px-2 h-9 bg-gray-200 rounded-[8px] absolute duration-300 opacity-0 flex items-center justify-center ${
                   pathName === links[activeLinkIndex].link ? "z-40" : "z-0"
                 }`}
                 style={{

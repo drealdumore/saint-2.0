@@ -3,16 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { contacts } from "@/lib/social-profiles";
+import { CONTACTS } from "@/lib/social-profiles";
+import { NAVLINKS } from "@/lib/constants";
 
 const AppFooter = () => {
   const pathName = usePathname();
-  const links = [
-    { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
-    { href: "/stack", text: "Stack" },
-    { href: "/bookmarks", text: "Bookmarks" },
-  ];
 
   return (
     <footer className="py-7 border-t  border-t-zinc-100">
@@ -24,7 +19,7 @@ const AppFooter = () => {
           <div className="xl:place-self-end">
             <h4 className="font-semibold mb-3">Pages</h4>
             <ul className="space-y-2 w-max">
-              {links.map((link, index) => (
+              {NAVLINKS.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href}>
                     {pathName === link.href && <span>- </span>}
@@ -45,7 +40,7 @@ const AppFooter = () => {
           <div className="xl:place-self-end">
             <h4 className="font-semibold mb-3">Connect</h4>
             <ul className="space-y-2">
-              {contacts.map((link, index) => (
+              {CONTACTS.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
