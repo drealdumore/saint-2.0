@@ -12,7 +12,7 @@ const Content = () => {
 
   return (
     <>
-      <div className="flex-grow md:max-w-2xl flex text-zinc-500 flex-col gap-4 text-justify">
+      <div className="flex-grow md:max-w-2xl flex text-zinc-500 flex-col gap-4">
         <p>
           Full-Stack Software Developer based in{" "}
           <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" /> with a

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import WithIcon from "../design/withIcon";
 import { AnimatePresence, motion } from "framer-motion";
-import { Heading } from "../design/heading";
+import Project from "../design/project";
 
 const Header = () => {
   return (
@@ -55,7 +55,7 @@ const Header = () => {
                 Interested in developing innovative applications that exceed
                 expectations on all platforms. I'm interested in Software
                 Development, Startups, artificial intelligence, cybersecurity,
-                mobile development and embedded systems.I enjoy learning and
+                mobile development and embedded systems. I enjoy learning and
                 experimenting with new technologies.
               </p>
             </article>

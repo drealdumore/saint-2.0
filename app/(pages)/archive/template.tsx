@@ -2,11 +2,10 @@
 
 import { Heading } from "@/components/design/heading";
 import Motion from "@/components/design/y-motion";
-import { FOLDER } from "@/lib/constants/icons";
 import { ARCHIVELINKS } from "@/lib/constants/links";
-import Link from "next/link";
 
 import React from "react";
+import FolderLink from "./_components/folderLink";
 
 const Archive = () => {
   return (
@@ -19,22 +18,8 @@ const Archive = () => {
 
         <div className="flex flex-col gap-3">
           <div className="bg-gray-900/5 rounded-lg  gap-8 grid grid-cols-2 md:grid-cols-3 p-2">
-            {ARCHIVELINKS.map((link, i) => (
-              <Link
-                key={i}
-                href={`/archive/${link.href}`}
-                className="p-4 relative rounded-lg flex items-center justify-center group cursor-alias active:scale-95 transition-all duration-75 
-                hover:bg-neutral-500/5"
-              >
-                <div className="flex flex-col items-center gap-2 w-28">
-                  <div className="text-neutral-400 relative ">
-                    <FOLDER />
-                  </div>
-                  <p className="font-medium text-center text-neutral-500 group-hover:text-neutral-900  transition-colors duration-75">
-                    {link.text}
-                  </p>
-                </div>
-              </Link>
+            {ARCHIVELINKS.map((link) => (
+              <FolderLink key={link.id} href={link.href} text={link.text} />
             ))}
           </div>
         </div>

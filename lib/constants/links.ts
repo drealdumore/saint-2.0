@@ -6,8 +6,9 @@ export const NAVLINKS = [
 ];
 
 export const ARCHIVELINKS = [
-  { href: "projects", text: "Projects" },
-  { href: "short-projects", text: "Short Projects" },
-  { href: "lab", text: "Laboratory" },
-  { href: "bookmarks", text: "Bookmarks" },
+  { id: 0, href: "projects", text: "Projects" },
+  { id: 1, href: "short-projects", text: "Short Projects" },
+  { id: 2, href: "components", text: "Components" },
+  { id: 3, href: "lab", text: "Laboratory" },
+  { id: 4, href: "bookmarks", text: "Bookmarks" },
 ];

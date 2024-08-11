@@ -23,6 +23,7 @@ import {
 import { motion } from "framer-motion";
 
 interface SkillsInterface {
+  id: number;
   icon?: any | null | undefined;
   skill?: string | null | undefined;
 }
@@ -31,21 +32,21 @@ const Skills = () => {
   const pathName = usePathname();
 
   const skillsArray: SkillsInterface[] = [
-    { icon: <HTML />, skill: "HTML / CSS" },
-    { icon: <SCSS />, skill: "SCSS" },
-    { icon: <TAILWIND />, skill: "Tailwind CSS" },
-    { icon: <JAVASCRIPT />, skill: "JavaScript" },
-    { icon: <TYPESCRIPT />, skill: "TypeScript" },
-    { icon: <MySQL />, skill: "MySQL" },
-    { icon: <ANGULAR />, skill: "Angular" },
-    { icon: <REACT />, skill: "React" },
-    { icon: <NEXTJS />, skill: "NextJs" },
-    { icon: <NODEJS />, skill: "Node Js" },
-    { icon: <EXPRESSJS />, skill: "Express Js" },
-    { icon: <MongoDB />, skill: "MongoDB" },
-    { icon: <PostgreSQL />, skill: "Postgres" },
-    { icon: <GIT />, skill: "Git - Version Control" },
-    { icon: <FIREBASE />, skill: "Firebase" },
+    { id: 0, icon: <HTML />, skill: "HTML / CSS" },
+    { id: 1, icon: <SCSS />, skill: "SCSS" },
+    { id: 2, icon: <TAILWIND />, skill: "Tailwind CSS" },
+    { id: 3, icon: <JAVASCRIPT />, skill: "JavaScript" },
+    { id: 4, icon: <TYPESCRIPT />, skill: "TypeScript" },
+    { id: 5, icon: <MySQL />, skill: "MySQL" },
+    { id: 6, icon: <ANGULAR />, skill: "Angular" },
+    { id: 7, icon: <REACT />, skill: "React" },
+    { id: 8, icon: <NEXTJS />, skill: "NextJs" },
+    { id: 9, icon: <NODEJS />, skill: "Node Js" },
+    { id: 10, icon: <EXPRESSJS />, skill: "Express Js" },
+    { id: 11, icon: <MongoDB />, skill: "MongoDB" },
+    { id: 12, icon: <PostgreSQL />, skill: "Postgres" },
+    { id: 13, icon: <GIT />, skill: "Git - Version Control" },
+    { id: 14, icon: <FIREBASE />, skill: "Firebase" },
   ];
 
   const softSkills = [
@@ -109,7 +110,7 @@ const Skills = () => {
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4 items-center">
                 {skillsArray.map((skill, index) => (
                   <SkillCard
-                    index={index}
+                    key={index}
                     skill={skill.skill}
                     icon={skill.icon}
                   />
@@ -128,7 +129,10 @@ const Skills = () => {
                 </div>
 
                 {softSkills.map((skill, i) => (
-                  <div key={i} className="min-w-[120px] py-4 px-3 ring-4 ring-neutral-800/5 gap-y-4 gap-x-4 justify-start items-center  border border-gray-200 rounded-lg flex">
+                  <div
+                    key={i}
+                    className="min-w-[120px] py-4 px-3 ring-4 ring-neutral-800/5 gap-y-4 gap-x-4 justify-start items-center  border border-gray-200 rounded-lg flex"
+                  >
                     <p className=" fancy font-bold opacity-100 hover:opacity-100 transition-all">
                       {skill.title}:{" "}
                       <span className="opacity-90 font-light">

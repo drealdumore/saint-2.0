@@ -8,21 +8,20 @@ const usePrefetch = () => {
 
   useEffect(() => {
     const prefetchLinks = () => {
-      
       const aElements = document.querySelectorAll("a[href]");
       aElements.forEach((link) => {
         const href = link.getAttribute("href");
         if (href && href.startsWith("/")) {
-          console.log(`Prefetching ${href}`);
+          // console.log(`Prefetching ${href}`);
           router.prefetch(href);
         }
       });
-      
+
       const linkComponents = document.querySelectorAll("[data-prefetch]");
       linkComponents.forEach((link) => {
         const href = link.getAttribute("data-prefetch");
         if (href && href.startsWith("/")) {
-          console.log(`Prefetching ${href}`);
+          // console.log(`Prefetching ${href}`);
           router.prefetch(href);
         }
       });

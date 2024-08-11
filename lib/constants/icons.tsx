@@ -1,3 +1,4 @@
+import React from "react";
 import { JSX, SVGProps } from "react";
 
 export function HTML() {
@@ -175,8 +176,8 @@ export function NEXTJS() {
         y2="18.431"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".377" stop-color="#fff" stop-opacity="0"></stop>
-        <stop offset=".666" stop-color="#fff" stop-opacity=".3"></stop>
+        <stop offset=".377" stop-color="#fff" stopOpacity="0"></stop>
+        <stop offset=".666" stop-color="#fff" stopOpacity=".3"></stop>
         <stop offset=".988" stop-color="#fff"></stop>
       </linearGradient>
       <rect
@@ -195,8 +196,8 @@ export function NEXTJS() {
         gradientUnits="userSpaceOnUse"
       >
         <stop offset=".296" stop-color="#fff"></stop>
-        <stop offset=".521" stop-color="#fff" stop-opacity=".5"></stop>
-        <stop offset=".838" stop-color="#fff" stop-opacity="0"></stop>
+        <stop offset=".521" stop-color="#fff" stopOpacity=".5"></stop>
+        <stop offset=".838" stop-color="#fff" stopOpacity="0"></stop>
       </linearGradient>
       <polygon
         fill="url(#NRNx2IPDe7PJlJvrxOKgWc_MWiBjkuHeMVq_gr3)"
@@ -433,7 +434,9 @@ export function LINK() {
   );
 }
 
-export function FOLDER() {
+export function FOLDER(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       width="100%"
@@ -441,12 +444,33 @@ export function FOLDER() {
       viewBox="0 0 96 96"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-16 h-16"
+      {...props}
     >
       <path
         d="M16 12C11.5817 12 8 15.5817 8 20V72C8 76.4183 11.5817 80 16 80H80C84.4183 80 88 76.4183 88 72V32C88 27.5817 84.4183 24 80 24H50.1407L44.5157 15.5624C43.0319 13.3368 40.5341 12 37.8593 12H16Z"
         fill="#dcdcdc"
       ></path>
+    </svg>
+  );
+}
+
+export function X() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="size-4"
+      width="44"
+      height="44"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="#000000"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+      <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
     </svg>
   );
 }

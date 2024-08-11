@@ -6,11 +6,11 @@ import React from "react";
 
 export const Backend = () => {
   const backendSkills = [
-    { icon: <MySQL />, skill: "MySQL" },
-    { icon: <NODEJS />, skill: "Node.js" },
-    { icon: <EXPRESSJS />, skill: "Express.js" },
-    { icon: <MongoDB />, skill: "MongoDB" },
-    { icon: <PostgreSQL />, skill: "PostgreSQL" },
+    { id: 1, icon: <MySQL />, skill: "MySQL" },
+    { id: 2, icon: <NODEJS />, skill: "Node.js" },
+    { id: 3, icon: <EXPRESSJS />, skill: "Express.js" },
+    { id: 4, icon: <MongoDB />, skill: "MongoDB" },
+    { id: 5, icon: <PostgreSQL />, skill: "PostgreSQL" },
   ];
 
   return (
@@ -26,10 +26,10 @@ export const Backend = () => {
       <div className="mt-4">
         <div className="relative w-full">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">
-            {backendSkills.map((skill, index) => (
+            {backendSkills.map((skill) => (
               <SkillCard
-                key={index}
-                index={index}
+              key={skill.id}
+                
                 skill={skill.skill}
                 icon={skill.icon}
               />
