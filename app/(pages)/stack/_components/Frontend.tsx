@@ -38,12 +38,7 @@ export const Frontend = () => {
       <div className="relative w-full mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {frontendSkills.map((skill, index) => (
-            <SkillCard
-              key={index}
-              index={index}
-              skill={skill.skill}
-              icon={skill.icon}
-            />
+            <SkillCard key={index} skill={skill.skill} icon={skill.icon} />
           ))}
         </div>
       </div>
