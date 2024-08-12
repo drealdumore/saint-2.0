@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import WithIcon from "../design/withIcon";
 import { AnimatePresence, motion } from "framer-motion";
-import Project from "../design/project";
+import { SmallPing } from "../design/ping";
 
 const Header = () => {
   return (
@@ -32,10 +32,8 @@ const Header = () => {
                 Current Status:
               </p>
               <article className="flex items-center flex-row gap-x-2">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-700 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-auto w-7 bg-emerald-700"></span>
-                </span>
+                <SmallPing />
+
                 <p className="flex font-semibold items-center gap-2 text-emerald-700">
                   Open to work
                 </p>
