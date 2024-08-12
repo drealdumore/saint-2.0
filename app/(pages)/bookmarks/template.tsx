@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Motion from "@/components/design/y-motion";
 import { Heading } from "@/components/design/heading";
+import BreadCrumb from "@/components/design/breadCrumb";
 
 interface LinkPosition {
   left: number;
@@ -37,10 +38,35 @@ const BookmarkTemplate = () => {
 
   const pathname = usePathname();
 
+  // Split pathname into segments for breadcrumb navigation
+  const pathSegments = pathname.split("/").filter(Boolean);
+
+  const shortLinks = [
+    { title: "Home", link: "/" },
+    { title: "Archive", link: "/archive" },
+    ...pathSegments.map((segment, index) => {
+      const link = `/${pathSegments.slice(0, index + 1).join("/")}`;
+      return {
+        title: segment.charAt(0).toUpperCase() + segment.slice(1),
+        link,
+      };
+    }),
+  ];
+
+  // Add the current segment as the last item without a link
+  if (pathSegments.length > 0) {
+    links.push({
+      title:
+        pathSegments[pathSegments.length - 1].charAt(0).toUpperCase() +
+        pathSegments[pathSegments.length - 1].slice(1),
+    });
+  }
+
   return (
     <Motion>
       <div className="flex flex-col gap-4">
-        <h1>Current Path: {pathname}</h1>
+        <BreadCrumb links={shortLinks} />
+
         <Heading
           title="Bookmarks"
           sub="Curation of my discoveries. Here is my go-to list of tools & software that I enjoy using and have helped me level up my skills."
@@ -88,8 +114,6 @@ const BookmarkTemplate = () => {
 
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-4 md:gap-4"></div>
         </div>
-
-        
       </div>
     </Motion>
   );
