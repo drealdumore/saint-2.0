@@ -119,7 +119,7 @@ const Skills = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             {pathName === "/" && (
               <div className="w-full grid grid-cols-1 gap-x-2 gap-y-4">
                 <div>
@@ -143,7 +143,7 @@ const Skills = () => {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </>

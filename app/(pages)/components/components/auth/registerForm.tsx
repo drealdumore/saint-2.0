@@ -2,48 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import ErrorMessage from "../../design/errorMessage";
-
-const schema = z
-  .object({
-    email: z
-      .string()
-      .nonempty("Email is required")
-      .email("Invalid email address"),
-    password: z
-      .string()
-      .nonempty("Password is required")
-      .min(6, "Password must be at least 6 characters")
-      .max(100, "Password must be at most 100 characters"),
-    passwordConfirm: z
-      .string()
-      .nonempty("Password confirmation is required")
-      .min(6, "Password must be at least 6 characters")
-      .max(100, "Password must be at most 100 characters"),
-  })
-  .refine((data) => data.password === data.passwordConfirm, {
-    message: "Passwords do not match",
-    path: ["passwordConfirm"],
-  });
 
 export default function Register() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: zodResolver(schema),
-  });
-
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (e: any) => {
+    e.preventDefault();
     setLoading(true);
 
     setTimeout(() => {
@@ -71,31 +38,16 @@ export default function Register() {
           </p>
         </div>
         <div className="p-6 pt-0">
-          <form
-            className="flex flex-col gap-4"
-            onSubmit={handleSubmit(onSubmit)}
-          >
+          <form className="flex flex-col gap-4" onSubmit={onSubmit}>
             <div className="space-y-2">
               <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                 Email
               </label>
               <input
-                className={`custom flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${
-                  errors.email
-                    ? "border-red-500 ring-2 ring-red-400 placeholder:text-red-400"
-                    : "border-input"
-                }`}
+                className={`custom flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 `}
                 type="email"
                 placeholder="Email"
-                {...register("email")}
               />
-
-              {errors.email && (
-                <ErrorMessage
-                  message={String(errors.email.message)}
-                  className="h-7"
-                />
-              )}
             </div>
 
             <div className="space-y-2">
@@ -104,14 +56,9 @@ export default function Register() {
               </label>
               <div className="relative">
                 <input
-                  className={`custom flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pr-10 ${
-                    errors.password
-                      ? "border-red-500 ring-2 ring-red-400 placeholder:text-red-400"
-                      : "border-input"
-                  }`}
+                  className={`custom flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pr-10 `}
                   type={showPassword ? "text" : "password"}
                   placeholder="••••••••"
-                  {...register("password")}
                 />
 
                 <span
@@ -133,12 +80,6 @@ export default function Register() {
                   </div>
                 </span>
               </div>
-              {errors.password && (
-                <ErrorMessage
-                  message={String(errors.password.message)}
-                  className="h-7"
-                />
-              )}
             </div>
 
             <div className="space-y-2">
@@ -147,14 +88,9 @@ export default function Register() {
               </label>
               <div className="relative">
                 <input
-                  className={`custom flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pr-10 ${
-                    errors.passwordConfirm
-                      ? "border-red-500 ring-2 ring-red-400 placeholder:text-red-400"
-                      : "border-input"
-                  }`}
+                  className={`custom flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pr-10 `}
                   type={showPasswordConfirm ? "text" : "password"}
                   placeholder="••••••••"
-                  {...register("passwordConfirm")}
                 />
                 <span
                   onClick={() => setShowPasswordConfirm((prev) => !prev)}
@@ -175,12 +111,6 @@ export default function Register() {
                   </div>
                 </span>
               </div>
-              {errors.passwordConfirm && (
-                <ErrorMessage
-                  message={String(errors.passwordConfirm.message)}
-                  className="h-7"
-                />
-              )}
             </div>
 
             <button
@@ -205,7 +135,7 @@ export default function Register() {
           <p className="text-sm">Already have an account?</p>
           <Link
             href="#"
-            data-prefetch="/login"
+            data-prefetch="#"
             className="inline-flex items-center justify-center underline text-sm hover:text-neutral-900 hover:underline-offset-4"
           >
             Log in

@@ -7,17 +7,17 @@ type projectType = {
 
 export const PROJECTS: projectType[] = [
   {
-    name: "Love Notes",
+    name: "MetaScraper",
     href: "#",
-    image: "/projects/lovenote.png",
+    image: "/projects/metascraper.png",
     description:
-      "unique space to track your relationship, write love letters and preserve every special moment.",
+      "Easily extract and retrieve metadata from any website, including the title, OG image, and description.",
   },
   {
-    name: "Cal.com",
+    name: "Write it",
     href: "#",
-    image: "/projects/calcom.webp",
+    image: "/projects/writeit.png",
     description:
-      "Streamline scheduling, boost productivity, simplify life",
+      " Craft Your Unique Sayings and Watch Them change to perfect handwritting",
   },
 ];
