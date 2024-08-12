@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Backend } from "./components/Backend ";
-import { Frontend } from "./components/Frontend";
+import { Backend } from "./_components/Backend ";
+import { Frontend } from "./_components/Frontend";
 import { Heading } from "@/components/design/heading";
 import Motion from "@/components/design/y-motion";
 

@@ -2,10 +2,10 @@
 
 import { Heading } from "@/components/design/heading";
 import Motion from "@/components/design/y-motion";
-import Experience from "./components/experience";
-import Content from "./components/content";
-import Links from "./components/links";
-import Profile from "./components/profile";
+import Experience from "./_components/experience";
+import Content from "./_components/content";
+import Links from "./_components/links";
+import Profile from "./_components/profile";
 
 const About = () => {
   return (

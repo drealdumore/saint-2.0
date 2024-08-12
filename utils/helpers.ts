@@ -1,4 +1,4 @@
-// Helper function to validate the URL format
+// Helper function to validate URL format
 export function isValidUrl(url: string) {
   try {
     new URL(url);
