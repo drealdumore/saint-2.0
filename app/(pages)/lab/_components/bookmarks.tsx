@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { BookmarkCard } from "@/components/cards/bookmark-card";
 import { BOOKMARKS } from "@/lib/constants/bookmarks";
 import { scrapeUrl } from "@/utils/scrape";
-import { PageSpinner } from "@/components/loaders";
+import { ButtonLoader, PageSpinner } from "@/components/loaders";
 
 const AllBookmarks = () => {
   const [error, setError] = useState("");
@@ -22,6 +22,7 @@ const AllBookmarks = () => {
         const { data, error } = await scrapeUrl(bookmark.url);
         if (data) {
           results.push(data);
+          console.log(results);
         } else {
           console.error(error);
         }

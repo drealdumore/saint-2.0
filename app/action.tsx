@@ -19,24 +19,7 @@ export const fetchBookmarks = async (page: number) => {
     }
   }
 
-  //   const response = await fetch(
-  //     `https://shikimori.one/api/animes?page=${page}&limit=8&order=popularity`
-  //   );
-
-  //   useEffect(() => {
-  //     const fetchBookmarks = async () => {
-  //       setLoading(true);
-  //       setError("");
-
-  //       setBookmarkData(results);
-  //       setLoading(false);
-  //     };
-
-  //     fetchBookmarks();
-  //   }, []);
-
   const data = results;
-  //   const data = await response.json();
 
   return data.map((item: BookmarkType, index: number) => (
     <BookmarkCard key={index} data={item} index={index} />

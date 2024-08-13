@@ -65,7 +65,7 @@ const BookmarkTemplate = () => {
         />
 
         {/* Navigation Links */}
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <div className="w-[90%]">
             <div
               className="relative grid-cols-3 grid sm:grid-cols-3 lg:grid-cols-4 p-2 rounded-lg ring-4 ring-neutral-900/5 text-sm font-medium text-white bg-[#0D0D0D] transition-all duration-100 w-full"
@@ -103,9 +103,7 @@ const BookmarkTemplate = () => {
               )}
             </div>
           </div>
-
-          {/* <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-4 md:gap-4"></div> */}
-        </div>
+        </div> */}
 
         {/* bookmarks */}
         <AllBookmarks />
