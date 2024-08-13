@@ -1,7 +1,7 @@
 "use client";
 
 import { Heading } from "@/components/design/heading";
-import Motion from "@/components/design/y-motion";
+import Motion from "@/lib/motion/y-motion";
 import { ARCHIVELINKS } from "@/lib/constants/links";
 
 import React from "react";

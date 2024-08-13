@@ -3,7 +3,7 @@
 import Header from "@/components/layout/header";
 import Skills from "@/components/design/skills";
 import React from "react";
-import Motion from "@/components/design/y-motion";
+import Motion from "@/lib/motion/y-motion";
 import Projects from "./_components/projects";
 
 const Home = () => {

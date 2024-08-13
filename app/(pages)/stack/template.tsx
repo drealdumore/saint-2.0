@@ -4,7 +4,7 @@ import React from "react";
 import { Backend } from "./_components/Backend ";
 import { Frontend } from "./_components/Frontend";
 import { Heading } from "@/components/design/heading";
-import Motion from "@/components/design/y-motion";
+import Motion from "@/lib/motion/y-motion";
 
 const Template = () => {
   return (

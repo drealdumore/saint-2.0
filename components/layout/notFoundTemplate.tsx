@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import Motion from "../design/y-motion";
+import Motion from "../../lib/motion/y-motion";
 import { NAVLINKS } from "@/lib/constants/links";
 
 

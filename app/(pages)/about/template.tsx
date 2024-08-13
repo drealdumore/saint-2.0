@@ -1,7 +1,7 @@
 "use client";
 
 import { Heading } from "@/components/design/heading";
-import Motion from "@/components/design/y-motion";
+import Motion from "@/lib/motion/y-motion";
 import Experience from "./_components/experience";
 import Content from "./_components/content";
 import Links from "./_components/links";

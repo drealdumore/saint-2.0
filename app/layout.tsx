@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 
 import localFont from "next/font/local";
@@ -10,7 +11,6 @@ import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { SOCIALS } from "@/lib/constants/social-profiles";
 import Prefetch from "@/components/others/prefetch";
 import AppNav from "@/components/layout/nav";
-// import AppNav from "@/components/layout/test-nav";
 
 const calSans = localFont({
   src: ".././public/fonts/CalSans-SemiBold.woff2",
@@ -22,11 +22,15 @@ const Moranga = localFont({
   variable: "--font-moranga",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+  // const bookmarkData = await scrapeAllBookmarks();
+  // console.log("layout:", bookmarkData);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -39,6 +43,7 @@ export default function RootLayout({
 
           <main className="px-4 sm:px-5 md:p-8 min-h-screen text-neutral-800  my-7 lg:pt-8 lg:py-20">
             {children}
+            
           </main>
 
           <AppFooter />

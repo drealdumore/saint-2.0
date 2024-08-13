@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import Motion from "@/components/design/y-motion";
+import Motion from "@/lib/motion/y-motion";
 import { Heading } from "@/components/design/heading";
 import BreadCrumb from "@/components/design/breadCrumb";
+import AllBookmarks from "./_components/bookmarks";
 
 interface LinkPosition {
   left: number;
@@ -13,7 +14,7 @@ interface LinkPosition {
 }
 
 const BookmarkTemplate = () => {
-  const links = [
+  const bookmarksFilter = [
     { title: "Development" },
     { title: "Icons" },
     { title: "VScode" },
@@ -53,15 +54,6 @@ const BookmarkTemplate = () => {
     }),
   ];
 
-  // Add the current segment as the last item without a link
-  if (pathSegments.length > 0) {
-    links.push({
-      title:
-        pathSegments[pathSegments.length - 1].charAt(0).toUpperCase() +
-        pathSegments[pathSegments.length - 1].slice(1),
-    });
-  }
-
   return (
     <Motion>
       <div className="flex flex-col gap-4">
@@ -79,7 +71,7 @@ const BookmarkTemplate = () => {
               className="relative grid-cols-3 grid sm:grid-cols-3 lg:grid-cols-4 p-2 rounded-lg ring-4 ring-neutral-900/5 text-sm font-medium text-white bg-[#0D0D0D] transition-all duration-100 w-full"
               ref={containerRef}
             >
-              {links.map((link, i) => (
+              {bookmarksFilter.map((link, i) => (
                 <div
                   key={i}
                   className={`z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-neutral-800 hover:bg-opacity-50 transition-all rounded-md max-md:text-[12px] text-center ${
@@ -112,8 +104,11 @@ const BookmarkTemplate = () => {
             </div>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-4 md:gap-4"></div>
+          {/* <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-4 md:gap-4"></div> */}
         </div>
+
+        {/* bookmarks */}
+        <AllBookmarks />
       </div>
     </Motion>
   );

@@ -1,31 +1,17 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {};
-
-// export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      "example.com",
-      "anotherdomain.com",
-      "lh3.googleusercontent.com",
-      "avatars.githubusercontent.com",
-    ],
+    domains: [], // Leave it empty to allow all domains
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "avatars.githubusercontent.com",
+        hostname: "**", // Matches any hostname
         port: "",
-        pathname: "/u/**",
-      },
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com", // Add pattern for Google user content
-        port: "",
-        pathname: "/a/**",
+        pathname: "/**", // Matches any pathname
       },
     ],
+    deviceSizes: [390, 435, 768, 1024, 1280],
+    formats: ['image/avif', 'image/webp'],
   },
 };
 

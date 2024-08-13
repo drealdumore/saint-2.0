@@ -47,14 +47,14 @@ const Header = () => {
 
               <p className="text-base mb-4">
                 Hi 👋 I'm{" "}
-                <span className="font-bold text-lg font-serif">Samuel</span>, a
+                <span className="font-bold text-lg font-mono">Samuel</span>, a
                 Full-Stack Developer based in{" "}
                 <WithIcon text="Nigeria" src="/icons/nigeria-flag.svg" />{" "}
                 Interested in developing innovative applications that exceed
-                expectations on all platforms. I'm interested in Software
-                Development, Startups, artificial intelligence, cybersecurity,
-                mobile development and embedded systems. I enjoy learning and
-                experimenting with new technologies.
+                expectations on all platforms. I'm also interested in Software
+                Development, Startups, artificial intelligence, machine
+                learning, mobile development and embedded systems. I enjoy
+                learning and experimenting with new technologies.
               </p>
             </article>
           </article>

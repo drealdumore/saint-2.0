@@ -19,7 +19,6 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({ links }) => {
             <li className="inline-flex items-center gap-1.5">
               {link.link ? (
                 <Link
-                  //   className="link transition-colors hover:text-neutral-900 hover:cursor-alias text-zinc-500"
                   className={`${
                     links.length <= 4 && index === links.length - 1
                       ? "transition-colors text-neutral-900 "
