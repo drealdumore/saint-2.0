@@ -32,6 +32,7 @@ export const BookmarkCard = ({ data, index }: BookmarkCardProps) => {
     >
       <Link
         href={data.url || "/#"}
+        target="_blank"
         className="flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100 border border-gray-200 ring-4 ring-neutral-800/5"
       >
         <div className="aspect-[1200/630] overflow-hidden rounded-md">
