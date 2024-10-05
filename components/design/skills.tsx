@@ -93,16 +93,16 @@ const Skills = () => {
           <div>
             {pathName === "/" && (
               <div className="w-full flex flex-col pb-8 gap-3 text-center">
-                <div className="relative flex  justify-center">
-                  <span className="absolute top-90 font-moranga text-4xl opacity-5">
-                    Expertise 💻
-                  </span>
+                <div className="flex flex-col gap-2 mb-4">
+                  <h1 className=" lg:text-[40px] font-semibold w-full font-cal text-[35px] leading-9">
+                    MY TECH STACK
+                  </h1>
+                  <p className="font-medium text-neutral-500">
+                    My expertise spans a diverse range of technologies enabling
+                    me to deliver cutting-edge solutions across various
+                    platforms.
+                  </p>
                 </div>
-                <h2 className="text-xl font-moranga md:text-2xl md:leading-7.5 lg:leading-9 max-w-3xl mx-auto  font-normal opacity-80 leading-5.7">
-                  In the past years, I have had the opportunity to gain
-                  expertise and proficiency in a diverse range of skills,
-                  including:
-                </h2>
               </div>
             )}
 
@@ -118,32 +118,6 @@ const Skills = () => {
               </div>
             </div>
           </div>
-
-          {/* <div>
-            {pathName === "/" && (
-              <div className="w-full grid grid-cols-1 gap-x-2 gap-y-4">
-                <div>
-                  <h2 className=" mb-3 font-cal font-bold text-2xl">
-                    Soft Skills
-                  </h2>
-                </div>
-
-                {softSkills.map((skill, i) => (
-                  <div
-                    key={i}
-                    className="min-w-[120px] py-4 px-3 ring-4 ring-neutral-800/5 gap-y-4 gap-x-4 justify-start items-center  border border-gray-200 rounded-lg flex"
-                  >
-                    <p className=" fancy font-bold opacity-100 hover:opacity-100 transition-all">
-                      {skill.title}:{" "}
-                      <span className="opacity-90 font-light">
-                        {skill.desc}
-                      </span>
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div> */}
         </div>
       </motion.div>
     </>

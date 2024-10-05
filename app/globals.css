@@ -145,3 +145,62 @@ body {
     backdrop-filter: blur(4px); /* Specific to Firefox */
   }
 }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 #ffd074;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0d1117;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 9s;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller {
+  max-width: 1600px;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.scroller[data-animated="true"] .inner__scroller {
+  width: -moz-max-content;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.inner__scroller {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@keyframes scroll {
+  100% {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
