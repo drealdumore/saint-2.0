@@ -14,6 +14,7 @@ const Project = ({ name, description, image, href }: projectType) => {
     <div className="w-full group/project mb-8 md:mb-0 lg:group-hover/wrapper:opacity-25 lg:hover:!opacity-100 transition-opacity">
       <a
         className="flex md:gap-0 gap-2 flex-col items-start relative group/link"
+        target="blank"
         href={href}
       >
         <div>

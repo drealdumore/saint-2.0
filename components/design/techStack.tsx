@@ -71,9 +71,7 @@ const TechStack = () => {
     <>
       <div className="w-full flex flex-col pb-2 gap-3 text-center">
         <div className="flex flex-col gap-2 mb-4">
-          <h1 className=" lg:text-[40px] font-semibold w-full font-cal text-[35px] leading-9">
-            MY TECH STACK
-          </h1>
+          <h2 className="md:text-2xl text-xl font-bold">My Tech Stack</h2>
           <p className="font-medium text-neutral-500">
             My expertise spans a diverse range of technologies enabling me to
             deliver cutting-edge solutions across various platforms.

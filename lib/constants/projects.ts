@@ -8,14 +8,14 @@ type projectType = {
 export const PROJECTS: projectType[] = [
   {
     name: "MetaScraper",
-    href: "#",
+    href: "https://meta-scrapper.vercel.app",
     image: "/projects/metascraper.png",
     description:
       "Easily extract and retrieve metadata from any website, including the title, OG image, and description.",
   },
   {
     name: "Write it",
-    href: "#",
+    href: "https://writee-it.vercel.app/",
     image: "/projects/writeit.png",
     description:
       " Craft Your Unique Sayings and Watch Them change to perfect handwritting",

@@ -23,7 +23,7 @@ const AppFooter = () => {
               {NAVLINKS.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href}>
-                    {pathName === link.href && <span>- </span>}
+                    {/* {pathName === link.href && <span>- </span>} */}
                     <span
                       className={`link transition-colors font-light hover:text-neutral-900 hover:cursor-alias ${
                         pathName === link.href

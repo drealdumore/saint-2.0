@@ -151,9 +151,9 @@ export function NEXTJS() {
         y2="4.266"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#0a070a"></stop>
-        <stop offset=".465" stop-color="#2b2b2b"></stop>
-        <stop offset="1" stop-color="#4b4b4b"></stop>
+        <stop offset="0" stopColor="#0a070a"></stop>
+        <stop offset=".465" stopColor="#2b2b2b"></stop>
+        <stop offset="1" stopColor="#4b4b4b"></stop>
       </linearGradient>
       <circle
         cx="24"
@@ -176,9 +176,9 @@ export function NEXTJS() {
         y2="18.431"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".377" stop-color="#fff" stopOpacity="0"></stop>
-        <stop offset=".666" stop-color="#fff" stopOpacity=".3"></stop>
-        <stop offset=".988" stop-color="#fff"></stop>
+        <stop offset=".377" stopColor="#fff" stopOpacity="0"></stop>
+        <stop offset=".666" stopColor="#fff" stopOpacity=".3"></stop>
+        <stop offset=".988" stopColor="#fff"></stop>
       </linearGradient>
       <rect
         width="2.953"
@@ -195,9 +195,9 @@ export function NEXTJS() {
         y2="40.529"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".296" stop-color="#fff"></stop>
-        <stop offset=".521" stop-color="#fff" stopOpacity=".5"></stop>
-        <stop offset=".838" stop-color="#fff" stopOpacity="0"></stop>
+        <stop offset=".296" stopColor="#fff"></stop>
+        <stop offset=".521" stopColor="#fff" stopOpacity=".5"></stop>
+        <stop offset=".838" stopColor="#fff" stopOpacity="0"></stop>
       </linearGradient>
       <polygon
         fill="url(#NRNx2IPDe7PJlJvrxOKgWc_MWiBjkuHeMVq_gr3)"
