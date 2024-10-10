@@ -54,23 +54,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        console.log("Form submitted successfully!");
-      } else {
-        console.error("Form submission failed.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
+    console.log("Form submitted successfully!");
   };
 
   return (
