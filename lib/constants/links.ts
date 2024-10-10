@@ -2,6 +2,7 @@ export const NAVLINKS = [
   { href: "/", text: "Home" },
   { href: "/about", text: "About" },
   { href: "/stack", text: "Stack" },
+  { href: "/contact", text: "Contact" },
   // { href: "/archive", text: "Archive" },
 ];
 

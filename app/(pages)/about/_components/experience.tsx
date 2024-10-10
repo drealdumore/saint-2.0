@@ -16,9 +16,12 @@ const Experience = () => {
               </div>
               <p className="font-semibold">{exp.title}</p>
               {exp.description.map((desc, i) => (
-                <p key={i} className="text-neutral-500 mb-4">
-                  {desc}
-                </p>
+                <div className="flex gap-3">
+                  <p className="font-light">{String(i + 1).padStart(2, "0")}</p>
+                  <p key={i} className="text-neutral-500 mb-4">
+                    {desc}
+                  </p>
+                </div>
               ))}
             </div>
           ))}

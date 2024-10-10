@@ -83,12 +83,10 @@ export default function ContactForm() {
       <form className="px-2" onSubmit={handleSubmit}>
         {FORMCONTENT.map((field, index) => (
           <div key={index} className="w-full border-t-2 border-zinc-100">
-            <div className="flex w-full gap-4 pt-8 pb-8">
-              <h1 className="text-placeholder">
-                {String(index + 1).padStart(2, "0")}
-              </h1>
+            <div className="flex w-full gap-4 pt-8 pb-8 font-light">
+              <p>{String(index + 1).padStart(2, "0")}</p>
               <div className="w-full">
-                <label className="flex flex-grow text-xl font-medium">
+                <label className="flex flex-grow text-lg font-medium">
                   {field.label}
                 </label>
                 <input
