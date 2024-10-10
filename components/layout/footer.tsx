@@ -45,6 +45,7 @@ const AppFooter = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
+                    target="blank"
                     className="text-zinc-400 hover:text-neutral-900 hover:underline underline-offset-1 transition-colors font-light cursor-alias"
                   >
                     {link.text}

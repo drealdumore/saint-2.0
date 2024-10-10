@@ -18,6 +18,7 @@ const Links = () => {
               <li key={index}>
                 <Link
                   href={link.href}
+                  target="blank"
                   className="text-zinc-400 hover:text-neutral-900 transition-colors font-medium cursor-alias"
                 >
                   {link.text}
@@ -32,6 +33,7 @@ const Links = () => {
           <ul className="space-y-2">
             <li>
               <a
+                target="blank"
                 href="mailto:samuelisah234@gmail.com"
                 className="text-zinc-400 hover:text-neutral-900 transition-colors font-medium cursor-alias"
               >
