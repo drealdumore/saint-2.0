@@ -4,7 +4,7 @@ import Motion from "@/lib/motion/y-motion";
 import { Heading } from "@/components/design/heading";
 import ContactForm from "./_components/contactForm";
 
-const ContactTemplate = () => {
+const Contact = () => {
   return (
     <Motion>
       <div className="flex flex-col gap-4">
@@ -24,4 +24,4 @@ const ContactTemplate = () => {
   );
 };
 
-export default ContactTemplate;
+export default Contact;

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import WithIcon from "../design/withIcon";
 import { AnimatePresence, motion } from "framer-motion";
@@ -18,7 +17,7 @@ const Header = () => {
         <div className="flex flex-col items-center justify-start md:gap-24 gap-16 w-full lg:pb-8 lg:justify-between lg:flex-row">
           <article className="flex flex-col lg:h-2/6 h-2/5 max-lg:w-full max-lg:flex">
             <article className="max-w-[170px] w-full flex-shrink-0 mb-10">
-              <Image
+              <img
                 id="avatar"
                 src="/avatars/avatar-smile.png"
                 className="tw-shadow aspect-square rounded-[29px]"
