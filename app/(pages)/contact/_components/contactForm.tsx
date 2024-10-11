@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,14 @@ export default function ContactForm() {
     service: "",
     message: "",
   });
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+  
+  };
 
   const FORMCONTENT = [
     {
