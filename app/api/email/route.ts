@@ -1,6 +1,5 @@
 import InquiryEmail from "@/emails";
 
-import { render } from "@react-email/render";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -17,15 +16,11 @@ export async function POST(req: Request) {
       );
     }
 
-    const emailHtml = render(
-      InquiryEmail({ username, email, organization, service, message })
-    );
-
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: email,
       subject: `New Inquiry from ${username} (${email})`,
-      react: emailHtml,
+      react: InquiryEmail({ username, email, organization, service, message }),
     });
 
     return new Response(

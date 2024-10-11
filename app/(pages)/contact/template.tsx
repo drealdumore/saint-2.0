@@ -17,6 +17,9 @@ const ContactTemplate = () => {
 
         <ContactForm />
       </div>
+
+
+      
     </Motion>
   );
 };

@@ -204,3 +204,10 @@ body {
     transform: translate(calc(-50% - 0.5rem));
   }
 }
+
+.icon-lg {
+  stroke-width: 1.5;
+  flex-shrink: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+}
