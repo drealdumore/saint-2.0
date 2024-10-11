@@ -27,7 +27,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   // const bookmarkData = await scrapeAllBookmarks();
   // console.log("layout:", bookmarkData);
 
@@ -43,7 +42,6 @@ export default async function RootLayout({
 
           <main className="px-4 sm:px-5 md:p-8 min-h-screen text-neutral-800  my-7 lg:pt-8 lg:py-20">
             {children}
-            
           </main>
 
           <AppFooter />
@@ -54,6 +52,7 @@ export default async function RootLayout({
 }
 
 export const metadata: Metadata = {
+  
   metadataBase: new URL("https://drealdumore.vercel.app/"),
   robots: {
     index: true,
@@ -75,6 +74,7 @@ export const metadata: Metadata = {
     url: "https://drealdumore.vercel.app/",
     siteName: sharedMetadata.title,
     locale: "en_IE",
+    images: sharedMetadata.url + "/api/og",
   },
   alternates: {
     canonical: "/",
