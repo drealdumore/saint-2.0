@@ -33,10 +33,6 @@ html {
   font-weight: 600;
 }
 
-.Moranga {
-  font-family: Moranga bold;
-  font-size: 40px;
-}
 
 @media only screen and (max-width: 440px) {
   .pro-grid {

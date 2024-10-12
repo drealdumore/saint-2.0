@@ -11,15 +11,11 @@ import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { SOCIALS } from "@/lib/constants/social-profiles";
 import Prefetch from "@/components/others/prefetch";
 import AppNav from "@/components/layout/nav";
+import { Analytics } from "@vercel/analytics/next";
 
 const calSans = localFont({
   src: ".././public/fonts/CalSans-SemiBold.woff2",
   variable: "--font-calSans",
-});
-
-const Moranga = localFont({
-  src: ".././public/fonts/moranga-bold.otf",
-  variable: "--font-moranga",
 });
 
 export default async function RootLayout({
@@ -34,7 +30,7 @@ export default async function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable}`}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable}`}
     >
       <body>
         <Prefetch />
@@ -47,6 +43,7 @@ export default async function RootLayout({
 
           <AppFooter />
         </div>
+        <Analytics />
       </body>
     </html>
   );

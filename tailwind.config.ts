@@ -17,7 +17,6 @@ const config: Config = {
       fontFamily: {
         cal: ["var(--font-calSans)"],
         bdog: ["var(--font-bdog)"],
-        moranga: ["var(--font-moranga)"],
         sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
         mono: ["var(--font-geist-mono)", ...defaultTheme.fontFamily.mono],
       },
