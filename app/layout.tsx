@@ -74,7 +74,8 @@ export const metadata: Metadata = {
     url: "https://drealdumore.vercel.app",
     siteName: sharedMetadata.title,
     locale: "en_IE",
-    images: sharedMetadata.url + "/api/og",
+    images: sharedMetadata.image,
+    // images: sharedMetadata.url + "/api/og",
   },
   alternates: {
     canonical: "/",

@@ -3,11 +3,18 @@ import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { getBoldFont, getRegularFont } from "@/utils/fonts";
 import { ImageResponse } from "next/og";
 
+type sizeType = {
+  width: number;
+  height: number;
+};
+
 export const alt = sharedMetadata.title;
-export const size = {
+
+export const size: sizeType = {
   width: sharedMetadata.ogImage.width,
   height: sharedMetadata.ogImage.height,
 };
+
 export const contentType = sharedMetadata.ogImage.type;
 
 export async function GET() {
@@ -24,7 +31,8 @@ export async function GET() {
       />
     ),
     {
-      ...size,
+      width: size.width,
+      height: size.height,
       fonts: [
         {
           name: "Geist Sans",
