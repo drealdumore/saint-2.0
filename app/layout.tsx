@@ -31,11 +31,12 @@ export default async function RootLayout({
   // console.log("layout:", bookmarkData);
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        suppressHydrationWarning
-        className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable}`}
-      >
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${GeistSans.variable} ${GeistMono.variable} ${calSans.variable} ${Moranga.variable}`}
+    >
+      <body>
         <Prefetch />
         <div className="relative font-sans max-w-2xl mx-auto selection:bg-neutral-800 selection:text-white">
           <AppNav />
@@ -52,8 +53,7 @@ export default async function RootLayout({
 }
 
 export const metadata: Metadata = {
-  
-  metadataBase: new URL("https://drealdumore.vercel.app/"),
+  metadataBase: new URL("https://drealdumore.vercel.app"),
   robots: {
     index: true,
     follow: true,
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     },
     description: sharedMetadata.description,
     type: "website",
-    url: "https://drealdumore.vercel.app/",
+    url: "https://drealdumore.vercel.app",
     siteName: sharedMetadata.title,
     locale: "en_IE",
     images: sharedMetadata.url + "/api/og",
