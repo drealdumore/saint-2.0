@@ -8,14 +8,14 @@ type sizeType = {
   height: number;
 };
 
-export const alt = sharedMetadata.title;
+const alt = sharedMetadata.title;
 
 const size: sizeType = {
   width: sharedMetadata.ogImage.width,
   height: sharedMetadata.ogImage.height,
 };
 
-export const contentType = sharedMetadata.ogImage.type;
+const contentType = sharedMetadata.ogImage.type;
 
 export async function GET() {
   const [regularFontData, boldFontData] = await Promise.all([
