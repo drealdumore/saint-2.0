@@ -10,6 +10,8 @@ import {
   REACT,
   ANGULAR,
   NEXTJS,
+  FRAMER,
+  VUE,
 } from "@/lib/constants/icons";
 import React from "react";
 
@@ -21,8 +23,10 @@ export const Frontend = () => {
     { icon: <JAVASCRIPT />, skill: "JavaScript" },
     { icon: <TYPESCRIPT />, skill: "TypeScript" },
     { icon: <ANGULAR />, skill: "Angular" },
+    { icon: <FRAMER />, skill: "Framer Motion" },
     { icon: <REACT />, skill: "ReactJS" },
     { icon: <NEXTJS />, skill: "NextJS" },
+    { icon: <VUE />, skill: "VueJS" },
   ];
 
   return (

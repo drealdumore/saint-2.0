@@ -16,6 +16,8 @@ import {
   PostgreSQL,
   GIT,
   FIREBASE,
+  FRAMER,
+  VUE,
 } from "@/lib/constants/icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -64,6 +66,8 @@ const skillsArray: SkillsInterface[] = [
   { id: 12, icon: <PostgreSQL />, skill: "Postgres" },
   { id: 13, icon: <GIT />, skill: "Git - Version Control" },
   { id: 14, icon: <FIREBASE />, skill: "Firebase" },
+  { id: 15, icon: <VUE />, skill: "VueJS" },
+  { id: 16, icon: <FRAMER />, skill: "Framer Motion" },
 ];
 
 const TechStack = () => {

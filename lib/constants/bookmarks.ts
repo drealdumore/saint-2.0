@@ -18,6 +18,6 @@ export const BOOKMARKS = (): bookmarkScrapeType[] => [
   { url: "https://www.flagpack.xyz" },
   { url: "https://million.dev/lint" },
   { url: "https://notion-avatar.vercel.app" },
-  { url: "https://svgl.vercel.app" },
+  { url: "https://svgl.app" },
   { url: "https://vercel.com/font" },
 ];
