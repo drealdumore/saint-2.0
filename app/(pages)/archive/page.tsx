@@ -4,7 +4,7 @@ import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Archive | ${sharedMetadata.title}`,
+  title: `My Archive`,
   description: "My collection of smaller projects, MVPs, and creative ideas.",
 };
 

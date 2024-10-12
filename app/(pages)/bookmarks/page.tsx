@@ -4,7 +4,7 @@ import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Bookmarks | ${sharedMetadata.title}`,
+  title: `My Bookmarks`,
   description:
     "My go-to list of tools & software that I enjoy using and have helped me level up my skills.",
 };

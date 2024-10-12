@@ -19,7 +19,7 @@ import {
 } from "@/lib/constants/icons";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { SkillCard } from "../cards/skill-card";
+import { SkillCard } from "../../../../components/cards/skill-card";
 
 interface SkillsInterface {
   id: number;

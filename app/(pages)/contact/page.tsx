@@ -3,7 +3,7 @@ import { sharedMetadata } from "@/lib/constants/shared-meta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Contact me | ${sharedMetadata.title}`,
+  title: `Contact me`,
 };
 
 const page = () => {

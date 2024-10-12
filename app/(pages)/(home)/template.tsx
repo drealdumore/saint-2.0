@@ -4,7 +4,7 @@ import Header from "@/components/layout/header";
 import React from "react";
 import Motion from "@/lib/motion/y-motion";
 import Projects from "./_components/projects";
-import TechStack from "@/components/design/techStack";
+import TechStack from "./_components/techStack";
 
 const Home = () => {
   return (
