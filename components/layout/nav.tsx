@@ -18,7 +18,7 @@ const AppNav = () => {
     { link: "/about", title: "About" },
     { link: "/stack", title: "Stack" },
     {
-      link: "https://docs.google.com/document/d/1Yiwj9xYJ1CzXda6izCjxJlhUkOnZLKU_2s5RAkptO2A/edit?usp=sharing",
+      link: "https://drive.google.com/file/d/1QfhiecFxJ0OWFoPWxxjj4Uhmy1LCVI7T/view?usp=sharing",
       title: "Resume",
     },
   ];
