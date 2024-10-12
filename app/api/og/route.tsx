@@ -10,7 +10,7 @@ type sizeType = {
 
 export const alt = sharedMetadata.title;
 
-export const size: sizeType = {
+const size: sizeType = {
   width: sharedMetadata.ogImage.width,
   height: sharedMetadata.ogImage.height,
 };
